@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectsDetails</title>
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="ProjectDetails.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+    <header>
+  <nav class="navbar navbar-expand-lg py-2">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="Ramaniyamicons/Ramanaiyamlogo.png" alt="Ramaniyam logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#mobileNavModal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Desktop Navbar -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav w-100 d-flex justify-content-evenly align-items-center">
+            <li class="nav-item dropdown dropdown-mega">
+           <a class="nav-link d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    PROJECTS <i class="bi bi-chevron-down ms-1"></i>
+            </a>
+
+  <div class="dropdown-menu megamenu p-0 border-0 ">
+  <div class="container">
+      <ul class="list-unstyled d-flex justify-content-evenly px-0 mb-0 text-uppercase">
+      <li><a href="#" class="text-dark text-decoration-none d-block p-3">New Launches</a></li>
+      <li><a href="#" class="text-dark text-decoration-none d-block p-3">Featured</a></li>
+      <li><a href="#" class="text-dark text-decoration-none d-block p-3">Ongoing</a></li>
+      <li><a href="#" class="text-dark text-decoration-none d-block p-3">Completed</a></li>
+      <li><a href="#" class="text-dark text-decoration-none d-block p-3">Upcoming</a></li>
+      <li><a href="Allprojects.html" class="text-dark text-decoration-none d-block p-3">All Projects</a></li>
+    </ul>
+  </div>
+</div>
+
+          </li>
+         <li class="nav-item dropdown dropdown-mega">
+  <a class="nav-link d-flex align-items-center" href="#" role="button">
+    ABOUT US <i class="bi bi-chevron-down ms-1"></i>
+  </a>
+
+  <div class="dropdown-menu megamenu p-0 border-0 ">
+    <div class="container">
+      <ul class="list-unstyled d-flex justify-content-evenly px-0 mb-0 text-uppercase">
+        <li><a href="#" class="text-dark text-decoration-none d-block p-3">Our Story</a></li>
+        <li><a href="#" class="text-dark text-decoration-none d-block p-3">The Team</a></li>
+        <li><a href="#" class="text-dark text-decoration-none d-block p-3">Enablers</a></li>
+        <li><a href="#" class="text-dark text-decoration-none d-block p-3">Affiliates</a></li>
+        <li><a href="#" class="text-dark text-decoration-none d-block p-3">Testimonials</a></li>
+        <li><a href="#" class="text-dark text-decoration-none d-block p-3">In the Media</a></li>
+        <li><a href="#" class="text-dark text-decoration-none d-block p-3">Awards</a></li>
+      </ul>
+    </div>
+  </div>
+</li>
+
+          <li class="nav-item"><button class="newbutton">WHAT'S NEW</button></li>
+          <li class="nav-item d-flex align-items-center">
+            <img class="me-1" width="40" src="Ramaniyamicons/retirement-home - maroon 1.png" alt="">
+            <a href="Seniorliving.html " class="text-decoration-none text-dark ms-2" style="font-weight: 500;">SENIOR LIVING</a>
+          </li>
+          <li class="nav-item d-flex align-items-center enquirenow">
+            <img class="me-1" src="Ramaniyamicons/Group 2.png" alt="Phone Icon" width="40" height="40">
+            <div class="text ms-2" data-bs-toggle="modal" data-bs-target="#enquiryModal" style="cursor: pointer;font-weight: 500;">
+              ENQUIRE NOW<br>+91 97109 28855
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- MODAL MENU FOR MOBILE -->
+<div class="modal fade" id="mobileNavModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="accordion" id="mobileMenuAccordion">
+          <!-- Projects -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingProjects">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProjects">
+                Projects
+              </button>
+            </h2>
+            <div id="collapseProjects" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
+              <div class="accordion-body">
+                <ul class="list-unstyled">
+                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">New Launches</a></li>
+                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Featured</a></li>
+                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Ongoing</a></li>
+                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Completed</a></li>
+                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Upcoming</a></li>
+                  <li><a href="Allprojects.html" class="text-dark text-decoration-none d-block py-1">All Projects</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Us -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingAbout">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAbout">
+                About Us
+              </button>
+            </h2>
+            <div id="collapseAbout" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
+              <div class="accordion-body">
+                <ul class="list-unstyled">
+                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Our Story</a></li>
+                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">The Team</a></li>
+                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Enablers</a></li>
+                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Affiliates</a></li>
+                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Testimonials</a></li>
+                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">In the Media</a></li>
+                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Awards</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- What's New -->
+          <div class="accordion-item">
+            <div class="accordion-header px-3 py-2">
+              <button class="newbutton w-100">WHAT’S NEW</button>
+            </div>
+          </div>
+
+          <!-- Senior Living -->
+          <div class="accordion-item">
+            <div class="accordion-header px-3 py-2 d-flex align-items-center">
+              <img class="me-2" width="40" src="Ramaniyamicons/retirement-home - maroon 1.png" alt="">
+              <span class="SENIOR-LIVING fw-semibold"><a href="Seniorliving.html" class="text-decoration-none text-dark">SENIOR LIVING</a></span>
+            </div>
+          </div>
+
+          <!-- Enquire Now -->
+          <div class="accordion-item">
+            <div class="accordion-header px-3 py-2 d-flex align-items-center">
+              <img class="me-2" width="40" src="Ramaniyamicons/Group 2.png" alt="Phone Icon">
+              <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+                ENQUIRE NOW<br><a href="#" class="text-dark text-decoration-none">+91 97109 28855</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Enquiry Modal -->
+<div class="modal fade" id="enquiryModal" tabindex="-1">
+  <div class="modal-dialog modal-lg ">
+    <div class="modal-content ">
+      <div class="modal-header" style="background-color: #D9D9D9;">
+        <h5 class="modal-title" style="font-family: 'aboreto';font-weight:500;">LET YOUR DREAMS BE OUR NEXT PROJECT!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="enquiryForm">
+          <div class="row g-3">
+            <!-- Left Column -->
+            <div class="col-md-6 d-flex flex-column">
+              <div class="order-1">
+                <input type="text" placeholder="Enter Your Name" maxlength="40" class="form-control" name="name" required>
+              </div>
+              <div class="order-2 mt-3">
+                <input type="email" placeholder="Enter your Email" class="form-control" name="email" required>
+              </div>
+              <div class="order-3 mt-3">
+                <div class="input-group">
+                  <span class="input-group-text">+91</span>
+                  <input type="tel" placeholder="Enter your Phone Number" class="form-control" name="phone" maxlength="10" pattern="\d{7,10}" required>
+                </div>
+              </div>
+              <div class="order-4 mt-3">
+                <input type="text" placeholder="Enter Your Captcha" class="form-control" id="captchaInput" name="captchaInput" required>
+              </div>
+              <!-- Captcha code (mobile view only) -->
+              <div class="order-5 mt-3 d-md-none">
+                <span class="input-group-text fw-semibold" id="captchaCodeMobile"></span>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-6 d-flex flex-column">
+              <div class="order-6 mt-2 mt-md-0">
+                <textarea class="form-control" placeholder="Enter your Message" name="message" maxlength="500" rows="6" required></textarea>
+              </div>
+              <!-- Captcha code (DESKTOP only) -->
+              <div class="d-none d-md-block mt-2">
+                <span class="input-group-text fw-semibold" id="captchaCodeDesktop"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="row align-items-center mb-3 mt-3">
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" required>
+                <label class="form-check-label" style="font-size: 12px;">
+                  I authorise Ramaniyam Real Estates Limited & its representatives to contact me with updates and notifications via Email/SMS/WhatsApp/Call.
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="text-center">
+            <button type="submit" class="btn text-light px-4" style="background-color: rgb(110, 24, 24); border-radius: 20px;">ENQUIRE NOW</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    <main>
+      <section class="first-sticky">
+  <div class="row align-items-center g-0" style="background-color: #722525">
+    
+    <!-- Left Content -->
+    <div class="col-12 col-lg-10">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="d-none d-md-block">
+        <ol class="breadcrumb mb-5 mt-3"  style="font-weight: 300;">
+          <li class="breadcrumb-item fw-medium">
+            <a class="text-decoration-none text-light ps-3"  style="font-weight: 300;" href="index.html">HOME</a>
+          </li>
+          <li class="breadcrumb-item fw-medium ps-4">
+            <a class="text-decoration-none text-light ps-3"  style="font-weight: 300;" href="#">PROJECTS</a>
+          </li>
+          <li class="breadcrumb-item fw-medium ps-4">
+            <a class="text-decoration-none text-light ps-3"  style="font-weight: 300;" href="#">NEW LAUNCHES</a>
+          </li>
+          <li class="breadcrumb-item active text-light text-decoration-underline fw-bold ps-4 " aria-current="page"  >
+            <a href="#" class="text-decoration-none text-light " style="font-weight: 300;">SADHASIVAM ENCLAVE</a>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Title Row -->
+      <div class="top d-flex flex-wrap align-items-center justify-content-between text-center text-lg-start px-3 mt-2">
+        <p class="mb-0">2 / 18 <span style="font-size: smaller;font-weight: 300;margin-left: 3px;">AVAILABLE</span> </p>
+        <h1 class="display-4 mb-0">SADHASIVAM ENCLAVE</h1>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="col-12 col-lg-2 text-center text-lg-end p-3">
+      <img src="Ramaniyamimages/miniflat icon.png" class="img-fluid" alt="Flat Icon" />
+    </div>
+    
+  </div>
+</section>
+
+
+      <div class="topics py-3 second-sticky" >
+        <div
+          class="scroll-wrapper d-flex flex-nowrap flex-md-wrap justify-content-md-evenly text-center"
+        >
+          <div class="topic-item"><a href="#OVERVIEW">OVERVIEW</a></div>
+          <div class="topic-item"><a href="#AVAILABILITY">AVAILABILITY</a></div>
+          <div class="topic-item"><a href="#AMENITIES">AMENITIES</a></div>
+          <div class="topic-item"><a href="#PLANS">PLANS</a></div>
+          <div class="topic-item"><a href="#APPROVALS">APPROVALS</a></div>
+          <div class="topic-item"><a href="#PROGRESS">PROGRESS</a></div>
+          <div class="topic-item"><a href="#LOCATION">LOCATION</a></div>
+        </div>
+      </div>
+
+      <div class="container pt-5 mb-5 d-flex flex-column flex-lg-row justify-content-between align-items-center" id="OVERVIEW">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-6">
+  <!-- Image Section with Zoom -->
+ <div class="mb-4 mb-lg-0 text-center zoom-wrapper" >
+  <img
+    src="Ramaniyamimages/Flat-project.png"
+    alt=""
+    class="img-fluid responsive-img zoomable-thumb" style="border-radius: 10px;"
+    data-bs-toggle="modal"
+    data-bs-target="#flatProjectZoomModal"
+  />
+  <span class="zoom-badge" data-bs-toggle="modal" data-bs-target="#flatProjectZoomModal">
+      <i class="bi bi-zoom-in"></i>
+  </span>
+</div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="flatProjectZoomModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content position-relative">
+      <!-- Close Button -->
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-body p-0">
+        <img src="Ramaniyamimages/Flat-project.png" class="img-fluid w-100" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div class="col-12 col-md-12 col-lg-6">
+            <!-- Content Section -->
+            <div
+              class="ms-lg-0 text-center text-lg-start w-100 px-3"
+              
+            >
+              <p class="title display-6" style="font-family: 'aboreto'; font-weight: 300; font-size: 32px;letter-spacing: 1px;">
+                PREMIUM HOMES IN A PRIME & WELL EDUCATED LOCATION
+              </p>
+              <p class="paragraph" style="color: #626262;">
+                Akshayam is the ideal location for a family looking to make the
+                best of what the neighborhood has to offer
+              </p>
+
+              <div class="row">
+                <div class="col-12 col-md-6 d-flex align-items-center mb-5">
+                  <img
+                    src="Ramaniyamicons/local-two.png"
+                    alt=""
+                    height="35px"
+                  />
+                  <p class="ps-3 mb-0">K K Nagar</p>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center mb-5">
+                  <img src="Ramaniyamicons/home.png" alt="" height="35px" />
+                  <p class="ps-3 mb-0">1,250 to 1,510 Sq Ft</p>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center mb-5">
+                  <img src="Ramaniyamicons/image 7.png" alt="" height="35px" />
+                  <p class="ps-3 mb-0">6 Amenities</p>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center mb-5">
+                  <img src="Ramaniyamicons/image 6.png" alt="" height="35px" />
+                  <p class="ps-3 mb-0">Construction Ongoing</p>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center mb-5">
+                  <img
+                    src="Ramaniyamicons/building-one2.png"
+                    alt=""
+                    height="30px"
+                  />
+                  <p class="ps-3 mb-0">Stilt + 5 floors</p>
+                </div>
+                <div
+                  class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start mb-5"
+                >
+                  <button type="button" class="brochure-btn fw-semibold btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#brochureModal">
+                     DOWNLOAD BROCHURE
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AVAILABILITY SECTION -->
+    <div class="AVAILABILITY" id="AVAILABILITY">
+  <h3>AVAILABILITY</h3>
+
+  <!-- Scroll container -->
+  <div class="table-wrap container">
+    <table class="availability-table">
+      <thead>
+        <tr style="letter-spacing: 1px;">
+          <th>Apt #</th>
+          <th>Saleable Area</th>
+          <th>Configuration</th>
+          <th>Floor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1A</td>
+          <td>1,215</td>
+          <td>3BHK + 2T</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>1B</td>
+          <td>1,215</td>
+          <td>3BHK + 2T</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>2A</td>
+          <td>1,215</td>
+          <td>3BHK + 2T</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>2B</td>
+          <td>1,215</td>
+          <td>3BHK + 2T</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3A</td>
+          <td>1,215</td>
+          <td>3BHK + 2T</td>
+          <td>3</td>
+        </tr>
+        <!-- add more rows if you want to test vertical scroll -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+      <!-- AMENITIES SECTION -->
+      <div class="AMENITIES " id="AMENITIES">
+        <h3>AMENITIES</h3>
+        <div class="container"  style="font-weight: 300;">
+          <div class="row d-flex justify-content-center text-center " >
+            <div class="col-6 col-md-4 col-lg-2 pt-3">
+              <img src="Ramaniyamicons/image 8.png" alt="" />
+              <p class="pt-4">Smart Home Automation</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 pt-3">
+              <img src="Ramaniyamicons/image 9.png" alt="" />
+              <p class="pt-4">Water Recycling & STP</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 pt-3">
+              <img src="Ramaniyamicons/image 10.png" alt="" />
+              <p class="pt-4">Amphitheatre</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 pt-3">
+              <img src="Ramaniyamicons/image 11.png" alt="" />
+              <p class="pt-4">Kid’s Play Area</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 pt-3">
+              <img src="Ramaniyamicons/swimming-pool.png" alt="" />
+              <p class="pt-4">Swimming Pool</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 pt-3">
+              <img src="Ramaniyamicons/image 12.png" alt="" />
+              <p class="pt-4">Power Backup</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLANS SECTION -->
+<div class="PLANS pt-4" id="PLANS">
+  <h3 class="text-center">PLANS</h3>
+  <div class="container">
+    <div class="row d-flex justify-content-center text-center" style="font-weight: 300;">
+
+      <!-- Plan Item 1 -->
+      <div class="col-12 col-md-6 col-lg-3 pt-3">
+        <div class="plan-card">
+          <img src="Ramaniyamicons/image 13.png" alt="Site Master Plan" class="img-fluid" style="border-radius: 10px;">
+          <span class="zoom-icon" data-index="0"><i class="bi bi-zoom-in"></i></span>
+        </div>
+        <p class="pt-2">Site Master Plan</p>
+      </div>
+
+      <!-- Plan Item 2 -->
+      <div class="col-12 col-md-6 col-lg-3 pt-3">
+        <div class="plan-card">
+          <img src="Ramaniyamicons/image 14.png" alt="Stilt Floor Plan" class="img-fluid" style="border-radius: 10px;">
+          <span class="zoom-icon" data-index="1"><i class="bi bi-zoom-in"></i></span>
+        </div>
+        <p class="pt-2">Stilt Floor Plan</p>
+      </div>
+
+      <!-- Plan Item 3 -->
+      <div class="col-12 col-md-6 col-lg-3 pt-3">
+        <div class="plan-card">
+          <img src="Ramaniyamicons/image 15.png" alt="Floor Plans(1 to 5)" class="img-fluid" style="border-radius: 10px;">
+          <span class="zoom-icon" data-index="2"><i class="bi bi-zoom-in"></i></span>
+        </div>
+        <p class="pt-2">Floor Plans(1 to 5)</p>
+      </div>
+
+      <!-- Plan Item 4 -->
+      <div class="col-12 col-md-6 col-lg-3 pt-3">
+        <div class="plan-card">
+          <img src="Ramaniyamicons/image 16.png" alt="Terrace Floor Plan" class="img-fluid" style="border-radius: 10px;">
+          <span class="zoom-icon" data-index="3"><i class="bi bi-zoom-in"></i></span>
+        </div>
+        <p class="pt-2">Terrace Floor Plan</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FULLSCREEN MODAL -->
+<div class="modal fade" id="planGalleryModal" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 position-relative text-center">
+        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+        
+        <!-- Fullscreen image -->
+        <img id="modalImage" src="" alt="" 
+             style="width: 100%; height: 100vh; object-fit: contain; background: #000;">
+        
+        <!-- Navigation Buttons -->
+        <button id="prevBtn" class="position-absolute top-50 start-0 translate-middle-y ms-2">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        
+        <button id="nextBtn" class="position-absolute top-50 end-0 translate-middle-y me-2">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- APPROVALS SECTION  -->
+<div class="APPROVALS pt-5 mb-5" id="APPROVALS">
+  <h3 class="text-center text-dark py-2 rounded w-auto mx-auto">APPROVALS</h3>
+  <div class="container">
+    <div class="row g-4" style="font-weight: 300;">
+
+      <!-- Planning Permit -->
+      <div class="col-12 col-xl-6">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 h-100 border rounded">
+          <div class="text-center text-md-start">
+            <img src="Ramaniyamicons/image 17.png" height="125" alt="">
+          </div>
+          <div class="ps-md-3 text-center text-md-start flex-grow-1">
+            <p class="fw-medium mb-1">Planning Permit #</p>
+            <p class="mb-2">PP/HRB/48/2022/ A to G</p>
+            <p class="fw-medium mb-1">Planning Permit Date</p>
+            <p class="mb-0">15 Nov 2022</p>
+          </div>
+          <div class="approval-img-wrapper-2 text-center mt-3 mt-md-0">
+            <img src="Ramaniyamimages/CMDA Approval Sample 1.png" class="approval-img-2 img-fluid" alt="Planning Permit" />
+            <span class="zoom-icon-2"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Building Permit -->
+      <div class="col-12 col-xl-6">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 h-100 border rounded">
+          <div class="text-center text-md-start">
+            <img src="Ramaniyamicons/image 20.png" height="125" alt="">
+          </div>
+          <div class="ps-md-3 text-center text-md-start flex-grow-1">
+            <p class="fw-medium mb-1">Building Permit #</p>
+            <p class="mb-2">CEBA/WDCN10/00360/2022</p>
+            <p class="fw-medium mb-1">Building Permit Date</p>
+            <p class="mb-0">23 Nov 2022</p>
+          </div>
+          <div class="approval-img-wrapper-2 text-center mt-3 mt-md-0">
+            <img src="Ramaniyamimages/CMDA Approval Sample 2.png" class="approval-img-2 img-fluid" alt="Building Permit" />
+            <span class="zoom-icon-2"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TN RERA Certificate -->
+      <div class="col-12 col-xl-6">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 h-100 border rounded">
+          <div class="text-center text-md-start">
+            <img src="Ramaniyamicons/image 18.png" height="125" alt="">
+          </div>
+          <div class="ps-md-3 text-center text-md-start flex-grow-1">
+            <p class="fw-medium mb-1">TN RERA Certificate #</p>
+            <p class="mb-2">TN/29/Building/0495/2022</p>
+            <p class="fw-medium mb-1">TN RERA Certificate Date</p>
+            <p class="mb-0">15 Dec 2022</p>
+          </div>
+          <div class="approval-img-wrapper-2 text-center mt-3 mt-md-0">
+            <img src="Ramaniyamimages/CMDA Approval Sample 3.png" class="approval-img-2 img-fluid" alt="TN RERA Certificate" />
+            <span class="zoom-icon-2"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Completion Certificate -->
+      <div class="col-12 col-xl-6">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 h-100 border rounded">
+          <div class="text-center text-md-start">
+            <img src="Ramaniyamicons/image 19.png" height="125" alt="">
+          </div>
+          <div class="ps-md-3 text-center text-md-start flex-grow-1">
+            <p class="fw-medium mb-1">Completion Certificate #</p>
+            <p class="mb-2">TN/29/Building/0495/2022</p>
+            <p class="fw-medium mb-1">Completion Certificate Date</p>
+            <p class="mb-0">15 Dec 2022</p>
+          </div>
+          <div class="approval-img-wrapper-2 text-center mt-3 mt-md-0">
+            <img src="Ramaniyamimages/CMDA Approval Sample 4.png" class="approval-img-2 img-fluid" alt="Completion Certificate" />
+            <span class="zoom-icon-2"><i class="bi bi-zoom-in"></i></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- New Modal for alternate class -->
+<div class="modal fade" id="imageModal2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+    <div class="modal-content modal-content-2">
+      <button
+        type="button"
+        class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+        data-bs-dismiss="modal"
+      ></button>
+      <img
+        src=""
+        id="modalImage2"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
+<!-- PROGRESS SECTION -->
+
+<div class="PROGRESS mb-5" id="PROGRESS">
+  <h3>PROGRESS</h3> 
+
+  <!-- Large Screen Layout -->
+  <div class="container my-5 d-none d-lg-block">
+    <div class="row">
+      <!-- Timeline Buttons -->
+      <div class="col-lg-3 d-flex flex-column gap-3" >
+        <button class="progress-btn-unique active" data-target="carousel1-unique">4th July, 2025</button>
+        <button class="progress-btn-unique" data-target="carousel2-unique">27th June, 2025</button>
+        <button class="progress-btn-unique" data-target="carousel3-unique">20th June, 2025</button>
+        <button class="progress-btn-unique" data-target="carousel4-unique">13th June, 2025</button>
+        <button class="progress-btn-unique" data-target="carousel5-unique">13th June, 2025</button>
+      </div>
+
+      <!-- Carousels -->
+      <div class="col-lg-9">
+        <div class="carousel-container-unique active" id="carousel1-unique">
+          <div class="carousel-wrapper-unique">
+            <div class="carousel-track-unique" style="font-family: 'inter'; font-size: 17px;">
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction-1.png"> <p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction-3.png"><p>2nd floor block work is in progress. (70% completed)</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction-1.png"><p>2nd floor block work is in progress. (70% completed)</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction- 2.png"> <p>Up-to 3rd floor roof concrete work is completed.</p></div>
+            </div>
+            <button class="carousel-btn-unique carousel-btn-left-unique">&#10094;</button>
+            <button class="carousel-btn-unique carousel-btn-right-unique">&#10095;</button>
+          </div>
+        </div>
+
+        <div class="carousel-container-unique" id="carousel2-unique">
+          <div class="carousel-wrapper-unique">
+            <div class="carousel-track-unique" style="font-family: 'inter'; font-size: 17px;">
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image1.png"> <p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image2.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image3.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image4.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+            </div>
+            <button class="carousel-btn-unique carousel-btn-left-unique">&#10094;</button>
+            <button class="carousel-btn-unique carousel-btn-right-unique">&#10095;</button>
+          </div>
+        </div>
+
+        <div class="carousel-container-unique" id="carousel3-unique">
+          <div class="carousel-wrapper-unique">
+            <div class="carousel-track-unique"style="font-family: 'inter'; font-size: 17px;">
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image5.jpg"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image6.jpg"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image7.jpg"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image8.webp"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+            </div>
+            <button class="carousel-btn-unique carousel-btn-left-unique">&#10094;</button>
+            <button class="carousel-btn-unique carousel-btn-right-unique">&#10095;</button>
+          </div>
+        </div>
+
+        <div class="carousel-container-unique" id="carousel4-unique">
+          <div class="carousel-wrapper-unique">
+            <div class="carousel-track-unique" style="font-family: 'inter'; font-size: 17px;">
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/Flat Bulding.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction-1.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/flat.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image3.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+            </div>
+            <button class="carousel-btn-unique carousel-btn-left-unique">&#10094;</button>
+            <button class="carousel-btn-unique carousel-btn-right-unique">&#10095;</button>
+          </div>
+        </div>
+
+        <div class="carousel-container-unique" id="carousel5-unique">
+          <div class="carousel-wrapper-unique">
+            <div class="carousel-track-unique" style="font-family: 'inter'; font-size: 17px;">
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction-1.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/fourth_image_resized_rounded.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction- 2.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              <div class="carousel-card-unique"><img src="Ramaniyamimages/image3.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+            </div>
+            <button class="carousel-btn-unique carousel-btn-left-unique">&#10094;</button>
+            <button class="carousel-btn-unique carousel-btn-right-unique">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Small/Medium Screen Accordion -->
+  <div class="container d-lg-none my-5">
+    <div class="accordion" id="progressAccordion">
+
+      <!-- Accordion Item -->
+      <div class="accordion-item-unique">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+            4th July, 2025
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#progressAccordion">
+          <div class="accordion-body">
+            <div class="carousel-wrapper-unique">
+              <div class="carousel-track-unique"style="font-family: 'inter'; font-size: 17px;">
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction-1.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/flat.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction-1.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              </div>
+              <button class="carousel-btn-unique carousel-btn-left-unique">&#10094;</button>
+              <button class="carousel-btn-unique carousel-btn-right-unique">&#10095;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion Item -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+            27th June, 2025
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#progressAccordion">
+          <div class="accordion-body">
+            <div class="carousel-wrapper-unique">
+              <div class="carousel-track-unique"style="font-family: 'inter'; font-size: 17px;">
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image8.webp"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction-1.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction- 2.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              </div>
+              <button class="carousel-btn-unique carousel-btn-left-unique">&#10094;</button>
+              <button class="carousel-btn-unique carousel-btn-right-unique">&#10095;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion Item -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+            20th June, 2025
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#progressAccordion">
+          <div class="accordion-body">
+            <div class="carousel-wrapper-unique">
+              <div class="carousel-track-unique"style="font-family: 'inter'; font-size: 17px;">
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image4.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image5.jpg"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image6.jpg"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image7.jpg"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              </div>
+              <button class="carousel-btn-unique carousel-btn-left-unique">&#10094;</button>
+              <button class="carousel-btn-unique carousel-btn-right-unique">&#10095;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion Item -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+            13th June, 2025
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#progressAccordion">
+          <div class="accordion-body">
+            <div class="carousel-wrapper-unique">
+              <div class="carousel-track-unique"style="font-family: 'inter'; font-size: 17px;">
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image1.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image2.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image3.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image4.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              </div>
+              <button class="carousel-btn-unique carousel-btn-left-unique">&#10094;</button>
+              <button class="carousel-btn-unique carousel-btn-right-unique">&#10095;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion Item -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+            13th June, 2025
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#progressAccordion">
+          <div class="accordion-body">
+            <div class="carousel-wrapper-unique">
+              <div class="carousel-track-unique"style="font-family: 'inter'; font-size: 17px;">
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction-3.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction-1.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction-3.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+                <div class="carousel-card-unique"><img src="Ramaniyamimages/image-construction- 2.png"><p>Up-to 3rd floor roof concrete work is completed.</p></div>
+              </div>
+              <button class="carousel-btn-unique carousel-btn-left-unique">&#10094;</button>
+              <button class="carousel-btn-unique carousel-btn-right-unique">&#10095;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+      <!-- LOCATION SECTION -->
+      <div class="LOCATION mb-5" id="LOCATION">
+        <h3>LOCATION</h3>
+        <div class="container">
+          <img src="Ramaniyamimages/image 28.png" width="100%" alt=""  style="border-radius: 20px;"/>
+        </div>
+      </div>  
+    </main>
+
+
+   
+
+
+
+
+
+
+    
+<footer class="mt-4" style="background-color: #722525;" >
+        <nav class="navbar">
+            <div class="container text-light ">
+                <div class="navbar-item Footer-elements">Copyrights @ 2025 All Rights<br> Reserved Ramaniyam</div>
+                <div class="navbar-item Footer-elements"><img src="Ramaniyamicons/Location.png"style="cursor: pointer;" width="40" alt="location.png" data-bs-toggle="modal" data-bs-target="#locationmodal">Contact Us</div>
+                <div class="navbar-item Footer-elements">Site Map</div>
+                <div class="navbar-item Footer-elements">Blogs</div>
+                <div class="navbar-item Footer-elements">
+                    <img class="facebook-logo ms-3" width="40" src="Ramaniyamicons/facebook.png" alt="facebook.img">
+                    <img class="instagram-logo ms-3" width="40" src="Ramaniyamicons/instagram.png" alt="instagram.img"></div>
+                <div class="navbar-item Footer-elements">Designed and Developed by <br> AyatiWorks</div>
+            </div>
+        </nav>
+</footer>
+
+
+
+<!-- footer modal -->
+<div class="modal" id="locationmodal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #D9D9D9;">
+        <h5 class="modal-title" style="font-family: 'aboreto'; font-weight: 500;">CONTACT US</h5>
+        <!-- Close button -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-light" style="background-color: #722525; font-size: 15px;">
+        <div class="d-flex ms-5 mb-4 mt-3">
+          <img src="Ramaniyamicons/f-ico-1.png" height="30px" alt="">
+          <p class="ms-5">Ramaniyam Real Estates Pvt Ltd.</p>
+        </div>
+        <div class="d-flex ms-5 mb-4">
+          <img src="Ramaniyamicons/f-ico-2.png" height="33px" alt="">
+          <p class="ms-5">
+            <a href="https://maps.app.goo.gl/rwYzTm6RGV5m8N3P6" class="text-light">
+              14/67, 3rd Main Rd, Gandhi Nagar, Adyar, Chennai, Tamil Nadu 600020
+            </a>
+          </p>
+        </div>
+        <div class="d-flex ms-5 mb-4">
+          <img src="Ramaniyamicons/f-ico-3.png" height="30px" alt="">
+          <p class="ms-5">Monday - Saturday : 9:30 am–5:30 pm</p>
+        </div>
+        <div class="d-flex ms-5 mb-4">
+          <img src="Ramaniyamicons/f-ico-4.png" height="30px" alt="">
+          <p class="ms-5">044 4344 7500 <br>+91 97109 28855, +91 72999 22617</p>
+        </div>
+        <div class="d-flex ms-5 mb-4">
+          <img src="Ramaniyamicons/f-ico-5.png" height="25px" alt="">
+          <p class="ms-5">sales@ramaniyam.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
+<!-- script section -->
+
+<!-- enquirenow-modal script      -->
+<script>
+function generateCaptcha() {
+  const length = Math.random() < 0.5 ? 6 : 8;
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let code = '';
+  for (let i = 0; i < length; i++) {
+    code += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  // assign to both spans
+  document.getElementById('captchaCodeMobile').innerText = code;
+  document.getElementById('captchaCodeDesktop').innerText = code;
+}
+
+document.getElementById('enquiryModal').addEventListener('show.bs.modal', generateCaptcha);
+document.getElementById('captchaCodeMobile').addEventListener('click', generateCaptcha);
+document.getElementById('captchaCodeDesktop').addEventListener('click', generateCaptcha);
+
+document.getElementById('enquiryForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const name = this.name.value.trim();
+  if (name.length === 0 || name.length > 40) { alert("Name must be between 1 and 40 characters."); return; }
+  const email = this.email.value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) { alert("Please enter a valid email address."); return; }
+  const phone = this.phone.value.trim();
+  const phonePattern = /^\d{7,10}$/;
+  if (!phonePattern.test(phone)) { alert("Phone number must be 7 to 10 digits."); return; }
+  const entered = this.captchaInput.value.trim();
+  const actual = (document.getElementById('captchaCodeDesktop').innerText.trim() || document.getElementById('captchaCodeMobile').innerText.trim());
+  if (entered !== actual) { alert("Captcha does not match."); generateCaptcha(); return; }
+  const message = this.message.value.trim();
+  if (message.length === 0 || message.length > 500) { alert("Message must be between 1 and 500 characters."); return; }
+
+  alert('Form submitted successfully!');
+  bootstrap.Modal.getInstance(document.getElementById('enquiryModal')).hide();
+  this.reset();
+  generateCaptcha();
+});
+</script>
+
+<!-- Header dropdown script -->
+<script>
+document.querySelectorAll('.nav-item.dropdown').forEach(function(dropdown) {
+  let timer;
+
+  dropdown.addEventListener('mouseenter', function() {
+    clearTimeout(timer);
+    this.classList.add('show');
+    const menu = this.querySelector('.dropdown-menu');
+    menu.classList.add('show');
+    menu.style.opacity = '1';
+    menu.style.visibility = 'visible';
+  });
+
+  dropdown.addEventListener('mouseleave', function() {
+    const menu = this.querySelector('.dropdown-menu');
+    timer = setTimeout(() => {
+      this.classList.remove('show');
+      menu.classList.remove('show');
+      menu.style.opacity = '';
+      menu.style.visibility = '';
+    }, 300); // Short delay for user to move mouse
+  });
+
+  // Keep menu open when hovering over dropdown-menu
+  const menu = dropdown.querySelector('.dropdown-menu');
+  menu.addEventListener('mouseenter', function() {
+    clearTimeout(timer);
+    dropdown.classList.add('show');
+    menu.classList.add('show');
+    menu.style.opacity = '1';
+    menu.style.visibility = 'visible';
+  });
+  menu.addEventListener('mouseleave', function() {
+    timer = setTimeout(() => {
+      dropdown.classList.remove('show');
+      menu.classList.remove('show');
+      menu.style.opacity = '';
+      menu.style.visibility = '';
+    }, 300);
+  });
+});
+</script>
+
+<script>
+document.querySelectorAll('.dropdown-mega').forEach(function (dropdown) {
+  if (window.innerWidth > 992) { // Desktop only
+    dropdown.addEventListener('mouseenter', function () {
+      let menu = this.querySelector('.dropdown-menu');
+      if (menu) menu.classList.add('show');
+    });
+    dropdown.addEventListener('mouseleave', function () {
+      let menu = this.querySelector('.dropdown-menu');
+      if (menu) menu.classList.remove('show');
+    });
+  }
+});
+</script>
+
+
+<!--DOWNLOAD BROCHURE MODAL -->
+<div class="modal fade" id="brochureModal" tabindex="-1" aria-labelledby="brochureModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      
+      <!-- Modal Header -->
+      <div class="modal-header border-0" style="background-color: #D9D9D9;">
+        <h5 class="modal-title display-6 fw-light"style=" font-family: 'aboreto'; font-size: 25px;" id="brochureModalLabel">YOU'RE JUST ONE STEP AWAY !</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <div class="row align-items-center">
+          
+          <!-- Left Image Column -->
+          <div class="col-lg-6 col-md-6 col-12 mb-3 mb-md-0">
+            <img src="Ramaniyamimages/image 29.png" alt="Building Image"   class="img-fluid rounded" />
+          </div>
+
+          <!-- Right Form Column -->
+          <div class="col-lg-6 col-md-6 col-12">
+            <form id="brochureForm">
+              
+              <!-- Name -->
+              <div class="mb-3">
+                <input type="text" class="form-control" id="name" placeholder="Enter Your Name" maxlength="50" required />
+              </div>
+
+              <!-- Email -->
+              <div class="mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Enter Your Email ID" required />
+              </div>
+
+              <!-- Mobile -->
+              <div class="mb-3">
+                <input type="tel" class="form-control" id="mobile" placeholder="Enter Your Mobile Number" maxlength="10" required pattern="[0-9]{10}" />
+              </div>
+
+              <!-- Project Name -->
+              <div class="mb-3">
+                <input type="text" class="form-control" id="project" placeholder="Enter Project Name" required />
+              </div>
+
+              <!-- Captcha Row -->
+              <div class="row mb-3 align-items-center">
+                <div class="col-6 col-md-12 col-lg-6 mt-2">
+                  <input type="text" class="form-control" id="captchaInput" placeholder="Enter Captcha" required />
+                </div>
+                <div class="col-6 col-md-12 col-lg-6 mt-2 d-flex justify-content-center captcha-container">
+                  <div class="captcha-box" id="captchaText"></div>
+                  <i class="bi bi-arrow-clockwise refresh-icon" id="refreshCaptcha"></i>
+                </div>
+              </div>
+
+              <!-- Checkbox -->
+              <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="consentModal" required />
+                <label class="form-check-label" style="font-size: 10px;" for="consentModal">
+                  I authorise Ramaniyam Real Estates Limited & its representatives to contact me with updates and notifications via Email/SMS/WhatsApp/Call.
+                </label>
+              </div>
+
+              <!-- Download Button -->
+              <div class="text-center">
+                <button type="submit" class="btn btn-dark rounded-pill px-5 py-2" style="background-color: #722525;">DOWNLOAD</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"></script>
+
+<!-- TOPICS SECTIONS ACTIVE JAVASCRIPT -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".topic-item a");
+
+  // Handle click with custom offset
+  navLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const target = document.getElementById(targetId);
+
+      if (target) {
+        // Calculate height of ALL sticky headers
+        let headerHeight = document.querySelector(".first-sticky")?.offsetHeight || 0;
+        let topicsHeight = document.querySelector(".second-sticky")?.offsetHeight || 0;
+        let totalOffset = headerHeight + topicsHeight + 10; // 10px extra space
+
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - totalOffset;
+        window.scrollTo({ top: targetPosition, behavior: "smooth" });
+      }
+    });
+  });
+
+  // Intersection Observer for active link highlight
+  const sections = document.querySelectorAll(
+    "#OVERVIEW, #AVAILABILITY, #AMENITIES, #PLANS, #APPROVALS, #PROGRESS, #LOCATION"
+  );
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").substring(1) === entry.target.id) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+
+  sections.forEach(section => observer.observe(section));
+});
+</script>
+
+      
+
+
+
+<!-- DOWNLOAD BROCHURE MODAL SCRIPT -->
+<script>
+function generateCaptcha() {
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  let captcha = "";
+  for (let i = 0; i < 6; i++) {
+    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  document.getElementById("captchaText").textContent = captcha;
+  return captcha;
+}
+
+let currentCaptcha = generateCaptcha();
+
+document.getElementById("refreshCaptcha").addEventListener("click", function() {
+  currentCaptcha = generateCaptcha();
+});
+
+document.getElementById("brochureForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  // Check captcha
+  const userCaptcha = document.getElementById("captchaInput").value.toUpperCase();
+  if (userCaptcha !== currentCaptcha) {
+    alert("Incorrect Captcha! Please try again.");
+    currentCaptcha = generateCaptcha();
+    document.getElementById("captchaInput").value = "";
+    return false;
+  }
+
+  // HTML5 validation
+  if (!this.checkValidity()) {
+    this.reportValidity();
+    return false;
+  }
+
+  // Simulate brochure download
+  const link = document.createElement("a");
+  link.href = "Ramaniyamimages/sample-brochure.pdf"; // Replace with your PDF file path
+  link.download = "Ramaniyam-Brochure.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  // Reset form and captcha
+  this.reset();
+  currentCaptcha = generateCaptcha();
+
+  // Close modal
+  const modalEl = document.getElementById('brochureModal');
+  const modal = bootstrap.Modal.getInstance(modalEl);
+  modal.hide();
+});
+</script>
+
+
+
+
+  <!-- plans-script   -->
+<script>
+  const imageSources = [
+    "Ramaniyamicons/image 13.png",
+    "Ramaniyamicons/image 14.png",
+    "Ramaniyamicons/image 15.png",
+    "Ramaniyamicons/image 16.png"
+  ];
+
+  let currentIndex = 0;
+  const modalImage = document.getElementById('modalImage');
+  const modal = new bootstrap.Modal(document.getElementById('planGalleryModal'));
+
+  document.querySelectorAll('.zoom-icon').forEach(icon => {
+    icon.addEventListener('click', function() {
+      currentIndex = parseInt(this.getAttribute('data-index'));
+      showImage(currentIndex);
+      modal.show();
+    });
+  });
+
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
+    showImage(currentIndex);
+  });
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % imageSources.length;
+    showImage(currentIndex);
+  });
+
+  function showImage(index) {
+    modalImage.src = imageSources[index];
+  }
+</script> 
+
+
+<!-- Approval Script -->
+<script>
+  const images2 = Array.from(document.querySelectorAll('.approval-img-2')).map(img => img.src);
+  let currentIndex2 = 0;
+
+  const modalImage2 = document.getElementById('modalImage2');
+  const imageModal2 = new bootstrap.Modal(document.getElementById('imageModal2'));
+
+  document.querySelectorAll('.approval-img-2').forEach((img, index) => {
+    img.addEventListener('click', function () {
+      currentIndex2 = index;
+      showImage2();
+      imageModal2.show();
+    });
+  });
+
+  function showImage2() {
+    modalImage2.src = images2[currentIndex2];
+  }
+</script>
+
+
+<!-- PROGRESS SECTION SCRIPT -->
+
+<script>
+  // Handle timeline button clicks (large screen)
+  const buttons = document.querySelectorAll('.progress-btn-unique[data-target]');
+  const carousels = document.querySelectorAll('.carousel-container-unique');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      buttons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+      const targetId = this.getAttribute('data-target');
+      if (targetId) {
+        carousels.forEach(c => c.classList.remove('active'));
+        document.getElementById(targetId).classList.add('active');
+      }
+    });
+  });
+
+  // Carousel logic for all carousels
+  document.querySelectorAll('.carousel-wrapper-unique').forEach(wrapper => {
+    const track = wrapper.querySelector('.carousel-track-unique');
+    const prevBtn = wrapper.querySelector('.carousel-btn-left-unique');
+    const nextBtn = wrapper.querySelector('.carousel-btn-right-unique');
+    const cards = wrapper.querySelectorAll('.carousel-card-unique');
+
+    let index = 0;
+
+    function getCardWidth() {
+      const card = cards[0];
+      if (!card) return 0;
+      const style = window.getComputedStyle(card);
+      const marginRight = parseFloat(style.marginRight) || 0;
+      const marginLeft = parseFloat(style.marginLeft) || 0;
+      return card.offsetWidth + marginLeft + marginRight;
+    }
+
+    function getCardsPerView() {
+      const cardWidth = getCardWidth();
+      return cardWidth ? Math.floor(wrapper.offsetWidth / cardWidth) : 1;
+    }
+
+    function getMaxIndex() {
+      return Math.max(cards.length - getCardsPerView(), 0);
+    }
+
+    function updateCarousel() {
+      const cardWidth = getCardWidth();
+      const maxIndex = getMaxIndex();
+
+      // Clamp index
+      if (index > maxIndex) index = maxIndex;
+      if (index < 0) index = 0;
+
+      track.style.transform = `translateX(-${index * cardWidth}px)`;
+
+      // Optional: disable buttons at edges
+      if (prevBtn) prevBtn.disabled = index === 0;
+      if (nextBtn) nextBtn.disabled = index === maxIndex;
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        if (index < getMaxIndex()) {
+          index++;
+          updateCarousel();
+        }
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        if (index > 0) {
+          index--;
+          updateCarousel();
+        }
+      });
+    }
+
+    window.addEventListener('resize', updateCarousel);
+
+    updateCarousel();
+  });
+</script>
+
+</body>
+</html>

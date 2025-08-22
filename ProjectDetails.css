@@ -1,0 +1,724 @@
+/*home page styling*/
+*{
+    margin: 0%; 
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+   
+    font-family: poppins;
+    
+}
+/* header styling */
+header {
+    border-bottom: 2px solid brown;
+    background-color: white;
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+.navbar-nav .nav-link {
+    color: #000;
+    font-weight: 500;
+}
+
+/* Remove default Bootstrap dropdown hover behavior for desktop */
+.navbar .dropdown-menu {
+    transition: all 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+
+}
+
+/* Remove hover-based dropdown opening, JS will handle it */
+.navbar .dropdown:hover > .dropdown-menu {
+    /* No rules here */
+}
+
+/* Mega dropdown positioning */
+.dropdown-mega {
+    position: static;
+}
+
+/* --- Mega menu fix: keep gap and allow selection --- */
+
+
+/* Show mega menu when parent has .show or menu has .show */
+.nav-item.dropdown.show .dropdown-menu.megamenu,
+.dropdown-menu.megamenu.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    display: block !important;
+}
+
+/* Also ensure all dropdown-menus are selectable when .show is present */
+.dropdown-menu.show {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+.megamenu .col-md-3 {
+    margin-bottom: 1rem;
+}
+
+.megamenu .icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: #b00;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color:#722525 !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color:#722525 !important;
+    background: transparent !important;
+}
+
+.megamenu a:hover {
+  color: #b71c1c !important; 
+}
+
+
+.dropdown-mega:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0; /* removes gap so it doesn’t disappear */
+}
+
+/* Make sure mega menu aligns properly */
+.dropdown-menu.megamenu {
+  left: 0;
+  right: 0;
+  top: 100%;
+  border-radius: 0;
+   background: #ddd;
+ background: #ddd;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    z-index: 1500;
+
+}
+
+.newbutton {
+    /* background-color: #722525; */
+    border: none;
+    color: white;
+    border-radius: 7px;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(5deg, #722525, #9B3232, #E58383);
+}
+
+.enquirenow .text {
+    line-height: 1.2;
+}
+
+@media (max-width: 991.98px) {
+    #mainNavbar {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .dropdown-menu.dropdown-row {
+        white-space: nowrap;
+        padding: 10px 15px;
+    }
+
+    .dropdown-menu.dropdown-row li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .dropdown-menu.dropdown-row .dropdown-item {
+        display: inline-block;
+        padding: 10px 15px;
+        text-align: center;
+    }
+}
+
+/* Remove hover-based dropdown for desktop, JS will handle it */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        /* No rules here */
+    }
+
+    .navbar .dropdown-menu {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+    }
+}
+
+
+
+.first-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+/* Default for mobile */
+.second-sticky {
+  position: sticky;
+  top: 260px; /* adjust for mobile header height */
+  z-index: 1029;
+  background: white;
+}
+
+/* Tablet */
+@media (min-width: 370px)  {
+  .second-sticky {
+    top: 230px; /* adjust for mobile M header height */
+  }
+}
+@media (min-width: 425px)  {
+  .second-sticky {
+    top: 230px; /* adjust for mobile L header height */
+  }
+}
+
+/* Tablet */
+@media (min-width: 576px) and (max-width: 991px) {
+  .second-sticky {
+    top: 292px; /* adjust for tablet header height */
+  }
+}
+
+/* Laptop/Desktop */
+@media (min-width: 992px) {
+  .second-sticky {
+    top: 138px; /* adjust for desktop header height */
+  }
+}
+
+@media (min-width: 1440px) {
+  .second-sticky {
+    top: 152px; /* adjust for desktop larger Leader height */
+  }
+}
+@media (min-width: 2540px) {
+  .second-sticky {
+    top: 172px; /* adjust for desktop larger Leader height */
+  }
+}
+
+
+
+
+
+
+/* Breadcrumb arrow */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: " > ";
+  color: #fff;
+}
+
+/* Title text */
+.top h1 {
+  font-size: 42px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+/* Availability text */
+.top p {
+  color: #fff;
+}
+
+/* Image styling */
+.top img {
+  max-height: 141px;
+  max-width: 242px;
+  object-fit: contain;
+}
+
+
+
+
+
+
+/* Tablet view */
+@media (max-width: 991.98px) {
+  .top h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 576px) {
+  .top h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .top p {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .top img {
+    max-height: 100px;
+    max-width: 180px;
+    margin-top: 10px;
+  }
+}
+
+/* topics styling */
+.topics {
+  background-color: rgb(202, 200, 200);
+  margin-top: 15px;
+  position: sticky;
+}
+
+.scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.topic-item {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 7px;
+  padding-top: 10px;
+
+}
+
+.topic-item a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  
+}
+
+
+.topic-item a:hover {
+  color: #8b0000; /* Hover color */
+}
+
+.topic-item a.active {
+  color: #8b0000; /* Active section color */
+  font-weight: bold;
+}
+
+
+/* Medium and Large Screens */
+@media (min-width: 768px) {
+  .topic-item {
+    flex: 1 1 auto;
+    max-width: unset;
+  }
+}
+
+.title {
+  border-bottom: 1px solid rgb(59, 57, 57);
+  padding-bottom: 30px;
+}
+
+.paragraph {
+  border-bottom: 1px solid rgb(82, 81, 81);
+  padding-bottom: 30px;
+}
+
+.brochure-btn {
+  background-color: #8D9EAE;
+  color: #fff;
+  border: none;
+  border-radius: 13px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0px 5px 5px rgba(44, 44, 44,0.3);
+  font-size: 14px;
+  
+
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+/* DOWMLOAD BROCHURE MODAL STYLING */
+
+  .captcha-container {
+    display: flex;
+    align-items: center;
+  }
+  .captcha-box {
+    background-color: #e2e2e2;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    user-select: none;
+  }
+  .refresh-icon {
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #555;
+  }
+  .refresh-icon:hover {
+    color: #000;
+  }
+
+
+/* AVAILABILITY SECTION */
+
+.table-body-scroll {
+  max-height: 200px;  /* <--- reduce/increase as needed */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
+.table-body-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+}
+/* AVAILABILITY */
+.AVAILABILITY {
+  padding: 40px 0;
+}
+.AVAILABILITY h3 {
+  background-color: #EFEFEF;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-family: 'aboreto';
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0px 4px 5px rgba(44, 44, 44,0.2);
+  letter-spacing: 1px;
+}
+
+/* Main scroll wrapper (vertical) */
+.table-wrap {
+  max-height: 250px;      /* adjust vertical scroll height */
+  overflow-y: auto;       /* enables vertical scroll */
+  overflow-x: auto;       /* enables horizontal scroll if needed */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px px rgba(0,0,0,0.2);
+}
+
+/* Table */
+.availability-table {
+  min-width: 500px;       /* ensures body can scroll horizontally on mobile */
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header styling + sticky */
+.availability-table thead {
+  background: #EFEFEF;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0px 4px 5px rgba(44, 44, 44,0.2);
+
+}
+.availability-table thead th {
+  padding: 15px 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Body */
+.availability-table tbody td {
+  padding: 14px 20px;
+  font-size: 15px;
+  color: #333;
+}
+
+
+
+/* AMENITIES , PLANS , APPROVALS , LOCATION STYLING */
+.AMENITIES h3,.PLANS h3,.APPROVALS h3,.LOCATION h3,.PROGRESS h3{
+    background-color: #EFEFEF;
+    display: block;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-family: 'aboreto';
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #000;
+    margin-bottom: 30px;
+    text-align: center;
+  box-shadow: 0px 4px 5px rgba(44, 44, 44,0.2);
+  letter-spacing: 1px;
+}
+/* plans section */
+.plan-card {
+    position: relative;
+    display: inline-block;
+    
+  }
+
+  .zoom-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .zoom-icon:hover {
+    background: rgba(0,0,0,0.8);
+  }
+
+  /* Make modal nav buttons overlay */
+  #prevBtn, #nextBtn {
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 8px 12px;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+
+  #prevBtn:hover, #nextBtn:hover {
+    background: rgba(0,0,0,0.8);
+  }
+
+  /* approval-modal-styling */
+ .approval-img-wrapper-2 {
+    position: relative;
+    display: inline-block;
+    padding-left: 15px;
+  }
+  
+  .approval-img-2 {
+    max-width: 120px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  .approval-img-2:hover {
+    transform: scale(1.05);
+  }
+  .zoom-icon-2 {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 50%;
+    padding: 6px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    font-size: 12px;
+  }
+  .approval-img-wrapper-2:hover .zoom-icon-2 {
+    opacity: 1;
+  }
+  /* Modal image styles */
+  #modalImage2 {
+    max-height: 98vh;
+    max-width: 98vw;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: auto;
+  }
+  .modal-content-2 {
+    background: transparent !important;
+    border: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+
+
+
+.ENQUIRE p{
+  font-family: aboreto;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.ENQUIRE {
+  padding: 40px 20px;
+}
+
+.ENQUIRE img {
+  border-radius: 8px;
+}
+
+.ENQUIRE form .form-control {
+  padding: 12px;
+  font-size: 16px;
+}
+
+.ENQUIRE button {
+  background-color: #6b1f1f; /* dark red/maroon like your site */
+  border: none;
+  font-weight: bold;
+  justify-content: center;
+  font-family: poppins;
+}
+
+.ENQUIRE button:hover {
+  background-color: #4a1414;
+}
+
+
+
+/* PROGRESS STYLING */
+
+ /* Timeline Buttons */
+    .progress-btn-unique {
+      border: none;
+      color: black;
+      border-radius: 18px;
+      font-weight: 400;
+      font-family: 'inter';
+      background-color: #fff;
+      height: 45px;
+      transition: all 0.3s ease;
+      width: 90%;
+      text-align: left;
+      padding: 10px 15px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    .progress-btn-unique.active {
+      background: linear-gradient(to right, #722525, #D84545);
+      color: #fff;
+      border-color: transparent;
+      height: 55px;
+    }
+    
+    /* Carousel wrapper */
+    .carousel-wrapper-unique {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .carousel-track-unique {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .carousel-card-unique {
+      flex: 0 0 50%;
+      padding: 10px;
+    }
+    .carousel-card-unique p{
+      margin-top: 10px;
+    }
+    @media (max-width: 768px) {
+      .carousel-card-unique {
+        flex: 0 0 100%; /* 1 image per slide on small/medium */
+      }
+    }
+    .carousel-card-unique img {
+      border-radius: 12px;
+      height: 300px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    /* Carousel Controls */
+    .carousel-btn-unique {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .carousel-btn-left-unique { left: 13px; color: black;background-color: rgba(208, 208, 208,0.6);font-size: 18px; }
+    .carousel-btn-right-unique { right: 13px;color: black;background-color: rgba(208, 208, 208,0.6);font-size: 18px; }
+
+    /* Hide inactive carousel in lg view */
+    .carousel-container-unique { display: none; }
+    .carousel-container-unique.active { display: block; }
+
+
+/* footer styling */
+footer {
+    padding: 10px;
+    border-top: solid 1px white;
+    /* font-weight: 300; */
+    font-size: 14px;
+    background-color: #722525;
+}
+
+
+@media (max-width: 450px) {
+    .Footer-elements {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+/* OVERVIEW IMAGE ZOOM ICON STYLING */
+
+.zoom-wrapper {
+  position: relative;       /* anchors absolute icon inside */
+  display: inline-block;    /* avoids breaking flex/grid layout */
+}
+
+.zoom-badge {
+  position: absolute;
+  top: 10px;          /* distance from top of image */
+  right: 15px;        /* distance from right of image */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;        /* stay above the image */
+}
+
+
+
+.zoomable-thumb {
+  cursor: zoom-in;
+}
+

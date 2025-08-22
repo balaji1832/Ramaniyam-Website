@@ -1,0 +1,317 @@
+/*home page styling*/
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 50% vh;
+    background: white; /* Start in white */
+    font-family: poppins;
+    transition: background 2s ease-in-out;
+}
+
+/* header styling */
+header {
+    border-bottom: 2px solid brown;
+    background-color: white;
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+.navbar-nav .nav-link {
+    color: #000;
+    font-weight: 500;
+}
+
+/* Remove default Bootstrap dropdown hover behavior for desktop */
+.navbar .dropdown-menu {
+    transition: all 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+
+}
+
+/* Remove hover-based dropdown opening, JS will handle it */
+.navbar .dropdown:hover > .dropdown-menu {
+    /* No rules here */
+}
+
+/* Mega dropdown positioning */
+.dropdown-mega {
+    position: static;
+}
+
+/* --- Mega menu fix: keep gap and allow selection --- */
+
+
+/* Show mega menu when parent has .show or menu has .show */
+.nav-item.dropdown.show .dropdown-menu.megamenu,
+.dropdown-menu.megamenu.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    display: block !important;
+}
+
+/* Also ensure all dropdown-menus are selectable when .show is present */
+.dropdown-menu.show {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+.megamenu .col-md-3 {
+    margin-bottom: 1rem;
+}
+
+.megamenu .icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: #b00;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color:#722525 !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color:#722525 !important;
+    background: transparent !important;
+}
+
+.megamenu a:hover {
+  color: #b71c1c !important; 
+}
+
+
+.dropdown-mega:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0; /* removes gap so it doesn’t disappear */
+}
+
+/* Make sure mega menu aligns properly */
+.dropdown-menu.megamenu {
+  left: 0;
+  right: 0;
+  top: 100%;
+  border-radius: 0;
+   background: #ddd;
+ background: #ddd;
+    border: 1px solid #ddd;
+    box-shadow: none;
+
+}
+
+.newbutton {
+    /* background-color: #722525; */
+    border: none;
+    color: white;
+    border-radius: 7px;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(5deg, #722525, #9B3232, #E58383);
+}
+
+.enquirenow .text {
+    line-height: 1.2;
+}
+
+@media (max-width: 991.98px) {
+    #mainNavbar {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .dropdown-menu.dropdown-row {
+        white-space: nowrap;
+        padding: 10px 15px;
+    }
+
+    .dropdown-menu.dropdown-row li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .dropdown-menu.dropdown-row .dropdown-item {
+        display: inline-block;
+        padding: 10px 15px;
+        text-align: center;
+    }
+}
+
+/* Remove hover-based dropdown for desktop, JS will handle it */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        /* No rules here */
+    }
+
+    .navbar .dropdown-menu {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+    }
+}
+
+/* main content styling */
+.summary{
+    font-family: aboreto;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.ramaniyam-info-section {
+    font-family: 'Poppins', sans-serif;
+}
+
+.info-number {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.info-label {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.4;
+}
+.Home-image{
+    height: 65%;
+}
+/* main content transition styling */
+.content-section {
+    transition: opacity 1s ease;
+}
+
+.hidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.visible {
+    opacity: 1;
+    height: auto;
+}
+
+/* footer styling */
+footer {
+    padding: 10px;
+    border-top: solid 1px white;
+    /* font-weight: 300; */
+    font-size: 14px;
+}
+
+
+@media (max-width: 450px) {
+    .Footer-elements {
+        margin-top: 10px;
+    }
+}
+/* Animation styling */
+#introOverlay {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 9999;
+}
+
+.hidden-seq {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+}
+
+/* === smoothFadeUp used for header & footer === */
+@keyframes smoothFadeUp {
+  0% { opacity:0; transform:translateY(40px) scale(.95); }
+  60%{ opacity:1; transform:translateY(-4px) scale(1.02); }
+  100%{opacity:1; transform:translateY(0) scale(1);}
+}
+.show-seq{
+  animation: smoothFadeUp 1s cubic-bezier(0.22,0.61,0.36,1) forwards;
+}
+
+/* RANDOM MIXED (anim-1 to anim-5) */
+@keyframes anim1{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+.anim-1{animation:anim1 .8s ease forwards;}
+
+@keyframes anim2{from{opacity:0;transform:translateX(-60px);}to{opacity:1;transform:translateX(0);}}
+.anim-2{animation:anim2 .8s ease-out forwards;}
+
+@keyframes anim3{from{opacity:0;transform:scale(.8);}to{opacity:1;transform:scale(1);}}
+.anim-3{animation:anim3 .8s ease forwards;}
+
+@keyframes anim4{from{opacity:0;transform:rotate(-6deg) translateY(40px);}to{opacity:1;transform:rotate(0) translateY(0);}}
+.anim-4{animation:anim4 .8s cubic-bezier(.22,.61,.36,1) forwards;}
+
+@keyframes anim5{
+  0%{opacity:0;transform:translateY(-80px) scale(.9);}
+  60%{opacity:1;transform:translateY(5px) scale(1);}
+  100%{transform:translateY(0);}
+}
+.anim-5{animation:anim5 .9s ease-out forwards;}
+
+/* IMAGES — slide from right */
+@keyframes imageFromRight{
+  from{opacity:0;transform:translateX(80px);}
+  to{opacity:1;transform:translateX(0);}
+}
+.img-slide-right{animation:imageFromRight .8s ease-out forwards;}
+
+
+
+/* home screen next page styling */
+.collage-slot {
+    position: relative;
+    overflow: hidden;
+    transition: height 0.5s ease; /* smooth height adjustment */
+}
+
+.collage-img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    /* transition: opacity 3s ease; */
+    margin-top:5px;
+    animation: fadeinout 6s infinite delay iteration-count direction fill-mode;
+    z-index: -1;
+}
+
+.collage-img.visible {
+    opacity: 1;
+    position: relative; /* ensures slot height adjusts */
+}
+#image-collage {
+    transition: transform 0.5s ease, opacity 3s ease;
+}
+
+
+
+
+/* @media (max-width: 767px) {
+    .Website-name {
+        margin: 50px 0 50px 0;  
+    }
+}
+@media (min-width: 1400px) {
+    .Website-name {
+        margin: 70px 0 70px 0;  
+    }
+} */
