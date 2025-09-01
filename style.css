@@ -1,3 +1,41 @@
+/* --- Flexbox layout for sticky header/footer --- */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: white; /* Start in white */
+    font-family: poppins;
+    transition: background 2s ease-in-out;
+}
+main {
+    flex: 1 0 auto;
+    width: 100%;
+}
+header {
+    flex-shrink: 0;
+    border-bottom: 2px solid #722525;
+    background-color: white;
+}
+footer {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 10px;
+    border-top: solid 1px white;
+    font-size: 14px;
+    background-color: #722525;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
 /*home page styling*/
 *{
     margin: 0; 
@@ -5,18 +43,18 @@
     box-sizing: border-box;
 }
 
-body{
+/* body{
     height: 50% vh;
-    background: white; /* Start in white */
+    background: white;
     font-family: poppins;
     transition: background 2s ease-in-out;
-}
+} */
 
 /* header styling */
-header {
+/* header {
     border-bottom: 2px solid brown;
     background-color: white;
-}
+} */
 
 .navbar-brand img {
     width: 100px;
@@ -209,12 +247,12 @@ header {
 }
 
 /* footer styling */
-footer {
+/* footer {
     padding: 10px;
     border-top: solid 1px white;
-    /* font-weight: 300; */
+    
     font-size: 14px;
-}
+} */
 
 
 @media (max-width: 800px) {
@@ -222,7 +260,6 @@ footer {
         margin-top: 10px;
     }
 }
-
 
 
 /* Animation styling */
