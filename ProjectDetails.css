@@ -196,7 +196,7 @@ header {
 /* Tablet */
 @media (min-width: 576px) and (max-width: 991px) {
   .second-sticky {
-    top: 292px; /* adjust for tablet header height */
+    top: 300px; /* adjust for tablet header height */
   }
 }
 
@@ -209,12 +209,12 @@ header {
 
 @media (min-width: 1440px) {
   .second-sticky {
-    top: 152px; /* adjust for desktop larger Leader height */
+    top: 140px; /* adjust for desktop larger Leader height */
   }
 }
 @media (min-width: 2540px) {
   .second-sticky {
-    top: 172px; /* adjust for desktop larger Leader height */
+    top: 140px; /* adjust for desktop larger Leader height */
   }
 }
 
@@ -684,7 +684,8 @@ footer {
 }
 
 
-@media (max-width: 450px) {
+
+@media (max-width: 800px) {
     .Footer-elements {
         margin-top: 10px;
     }

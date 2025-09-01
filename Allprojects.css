@@ -234,7 +234,7 @@ header {
 /* Prev / Next buttons */
 .carousel-btn {
   position: absolute;
-  top: 40%;
+  top: 35%;
   transform: translateY(-50%);
   background: rgba(238, 237, 237, 0.6);
   color: black;
@@ -312,8 +312,12 @@ footer {
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 800px) {
     .Footer-elements {
         margin-top: 10px;
     }
 }
+
+/* .status-buttons{
+  margin-right: 30px;
+} */

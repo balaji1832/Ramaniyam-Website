@@ -20,9 +20,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
- <header>
-  <nav class="navbar navbar-expand-lg py-2">
-    <div class="container">
+ <header class="sticky-top">
+  <nav class="navbar navbar-expand-lg py-2 " >
+    <div class="container ">
       <a class="navbar-brand" href="#">
         <img src="Ramaniyamicons/Ramanaiyamlogo.png" alt="Ramaniyam logo">
       </a>
@@ -244,21 +244,21 @@
 
 
 <main>
-  <div class="main-items container">
+  <div class="container main-items ">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb pt-4">
-        <li class="breadcrumb-item fw-medium"><a class="text-decoration-none text-dark ps-4 pe-4" href="index.html">HOME</a></li>
+        <li class="breadcrumb-item fw-medium"><a class="text-decoration-none text-dark ps-3 pe-4" href="index.html">HOME</a></li>
         <li class="breadcrumb-item fw-medium"><a class="text-decoration-none text-dark  pe-4" href="#">PROJECTS</a></li>
         <li class="breadcrumb-item active fw-medium" aria-current="page"><a style="color: #722525;"  href="#">ALL PROJECTS</a></li>
       </ol>
     </nav>
-    <div class="status-buttons pt-4">
+    <div class="status-buttons pt-4 me-3">
       <button id="availableBtn" class="btn btn-success fw-semibold me-2 mb-2" type="button">AVAILABLE</button>
       <button id="soldOutBtn" class="btn   mb-2" type="button" style="border: 1px solid #4C555E;color: #4C555E;">SOLD OUT</button>
     </div>
   </div>
 
-  <div class="container mb-5">
+<div class="container mb-5">
   
 
   <!-- AVAILABLE Carousel -->
@@ -274,7 +274,7 @@
     <!-- Available card-1 -->
     <div class="carousel-card">
       <div class="card position-relative">
-        <img src="Ramaniyamimages/flat.png" class="card-img-top" alt="Project Image">
+        <img src="Ramaniyamimages/flat-2.png" class="card-img-top" alt="Project Image">
         <div class="card-header">
           <p class="Apartment-name">SRI DEVI</p>
         </div>
@@ -321,7 +321,7 @@
     <!-- Available card-2 -->
     <div class="carousel-card">
       <div class="card position-relative">
-        <img src="Ramaniyamimages/flat.png" class="card-img-top" alt="Project Image">
+        <img src="Ramaniyamimages/flat-2.png" class="card-img-top" alt="Project Image">
         <div class="card-header">
           <p class="Apartment-name">SRI DEVI</p>
         </div>
@@ -368,7 +368,7 @@
     <!-- Available card-3 -->
     <div class="carousel-card">
       <div class="card position-relative">
-        <img src="Ramaniyamimages/flat.png" class="card-img-top" alt="Project Image">
+        <img src="Ramaniyamimages/flat-2.png" class="card-img-top" alt="Project Image">
         <div class="card-header">
           <p class="Apartment-name">SRI DEVI</p>
         </div>
@@ -415,7 +415,7 @@
     <!-- Available card-4 -->
     <div class="carousel-card">
       <div class="card position-relative">
-        <img src="Ramaniyamimages/flat.png" class="card-img-top" alt="Project Image">
+        <img src="Ramaniyamimages/flat-2.png" class="card-img-top" alt="Project Image">
         <div class="card-header">
           <p class="Apartment-name">SRI DEVI</p>
         </div>
@@ -481,7 +481,7 @@
     <!-- Sold Out Card 1 -->
     <div class="carousel-card">
       <div class="card position-relative">
-        <img src="Ramaniyamimages/flat.png" class="card-img-top" alt="Project Image">
+        <img src="Ramaniyamimages/flat-2.png" class="card-img-top" alt="Project Image">
         <div class="card-header"><p class="Apartment-name">SRI DEVI</p></div>
         <div class="card-body px-3 py-2" style="line-height: 23px">
           <div class="row">
@@ -519,7 +519,7 @@
     <!-- Sold Out Card 2 -->
     <div class="carousel-card">
       <div class="card position-relative">
-        <img src="Ramaniyamimages/flat.png" class="card-img-top" alt="Project Image">
+        <img src="Ramaniyamimages/flat-2.png" class="card-img-top" alt="Project Image">
         <div class="card-header"><p class="Apartment-name">SRI DEVI</p></div>
         <div class="card-body px-3 py-2" style="line-height: 23px">
           <div class="row">
@@ -556,7 +556,7 @@
     <!-- Sold Out Card 3 -->
     <div class="carousel-card">
       <div class="card position-relative">
-        <img src="Ramaniyamimages/flat.png" class="card-img-top" alt="Project Image">
+        <img src="Ramaniyamimages/flat-2.png" class="card-img-top" alt="Project Image">
         <div class="card-header"><p class="Apartment-name">SRI DEVI</p></div>
         <div class="card-body px-3 py-2" style="line-height: 23px">
           <div class="row">
@@ -589,7 +589,7 @@
     <!-- Sold Out Card 4 -->
     <div class="carousel-card">
       <div class="card position-relative">
-        <img src="Ramaniyamimages/flat.png" class="card-img-top" alt="Project Image">
+        <img src="Ramaniyamimages/flat-2.png" class="card-img-top" alt="Project Image">
         <div class="card-header"><p class="Apartment-name">SRI DEVI</p></div>
         <div class="card-body px-3 py-2" style="line-height: 23px">
           <div class="row">
@@ -718,19 +718,22 @@ showAvailable();
 
 
      
-   <footer class="mt-4" >
-        <nav class="navbar">
+   <footer class="mt-4 " >
+    <div class="container">
+      <nav class="navbar ">
             <div class="container text-light ">
-                <div class="navbar-item Footer-elements">Copyrights @ 2025 All Rights<br> Reserved Ramaniyam</div>
-                <div class="navbar-item Footer-elements"><img src="Ramaniyamicons/Location.png"style="cursor: pointer;" width="40" alt="location.png" data-bs-toggle="modal" data-bs-target="#locationmodal">Contact Us</div>
+                <div class="navbar-item Footer-elements ">Copyrights @ 2025 All Rights<br> Reserved Ramaniyam</div>
+                <div class="navbar-item Footer-elements ms-lg-5 "><img src="Ramaniyamicons/Location.png"style="cursor: pointer;" width="40" alt="location.png" data-bs-toggle="modal" data-bs-target="#locationmodal">Contact Us</div>
                 <div class="navbar-item Footer-elements">Site Map</div>
                 <div class="navbar-item Footer-elements">Blogs</div>
                 <div class="navbar-item Footer-elements">
-                    <img class="facebook-logo ms-3" width="40" src="Ramaniyamicons/facebook.png" alt="facebook.img">
-                    <img class="instagram-logo ms-3" width="40" src="Ramaniyamicons/instagram.png" alt="instagram.img"></div>
-                <div class="navbar-item Footer-elements">Designed and Developed by <br> AyatiWorks</div>
+                    <img class="facebook-logo ms-lg-2" width="40" src="Ramaniyamicons/facebook.png" alt="facebook.img">
+                    <img class="instagram-logo ms-lg-2 ms-3" width="40" src="Ramaniyamicons/instagram.png" alt="instagram.img"></div>
+                <div class="navbar-item Footer-elements">Designed and Developed by <br>AyatiWorks</div>
             </div>
         </nav>
+    </div>
+        
 </footer>
 
 
