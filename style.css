@@ -5,6 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body {
     min-height: 100vh;
@@ -401,3 +402,14 @@ footer {
         margin: 70px 0 70px 0;  
     }
 } */
+
+
+/* tablet-animation */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+#ramaniyam-banner.show {
+  animation: fadeIn 2s ease-in-out forwards;
+}

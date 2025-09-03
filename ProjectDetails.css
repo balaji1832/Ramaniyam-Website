@@ -661,13 +661,13 @@ header {
       border: none;
       color: #fff;
       font-size: 24px;
-      padding: 10px 15px;
+      padding: 8px 12px;
       border-radius: 50%;
       cursor: pointer;
       z-index: 10;
     }
-    .carousel-btn-left-unique { left: 13px; color: black;background-color: rgba(208, 208, 208,0.6);font-size: 18px; }
-    .carousel-btn-right-unique { right: 13px;color: black;background-color: rgba(208, 208, 208,0.6);font-size: 18px; }
+    .carousel-btn-left-unique { left: 13px; color: black;background-color: rgba(208, 208, 208,0.6);font-size: 15px; }
+    .carousel-btn-right-unique { right: 13px;color: black;background-color: rgba(208, 208, 208,0.6);font-size: 15px; }
 
     /* Hide inactive carousel in lg view */
     .carousel-container-unique { display: none; }
