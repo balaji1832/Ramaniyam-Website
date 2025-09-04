@@ -14,6 +14,7 @@ body {
     background: white; /* Start in white */
     font-family: poppins;
     transition: background 2s ease-in-out;
+    overflow-x: hidden;
 }
 body {
   background-attachment: fixed;
@@ -552,7 +553,7 @@ footer {
 .website-title p {
     color: #fff;
 }
-@media (min-width: 2560px) {
+@media (min-width: 3200px) {
   .website-title h1,
   .website-title p {
     color: #722525 !important;
@@ -565,7 +566,7 @@ footer {
 
 
 
-@media (min-width: 2560px) {
+@media (min-width: 3200px) {
   .info-label,.info-number {
     color: #722525 !important;
     
