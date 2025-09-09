@@ -203,7 +203,7 @@ header {
 /* Laptop/Desktop */
 @media (min-width: 992px) {
   .second-sticky {
-    top: 138px; /* adjust for desktop header height */
+    top: 110px; /* adjust for desktop header height */
   }
 }
 
@@ -740,7 +740,7 @@ footer {
 
   position: absolute;
   right: 20%;
-  bottom: -11px;
+  bottom: -16px;
   letter-spacing: 9px !important;
   font-size: 55px !important;
   

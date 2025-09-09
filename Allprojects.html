@@ -244,19 +244,55 @@
 
 
 <main>
-  <div class="container main-items ">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb pt-4">
-        <li class="breadcrumb-item fw-medium"><a class="text-decoration-none text-dark ps-3 pe-4" href="index.html">HOME</a></li>
-        <li class="breadcrumb-item fw-medium"><a class="text-decoration-none text-dark  pe-4" href="#">PROJECTS</a></li>
-        <li class="breadcrumb-item active fw-medium" aria-current="page"><a style="color: #722525;"  href="#">ALL PROJECTS</a></li>
-      </ol>
-    </nav>
-    <div class="status-buttons pt-4 me-3">
-      <button id="availableBtn" class="btn btn-success fw-semibold me-2 mb-2" type="button">AVAILABLE</button>
-      <button id="soldOutBtn" class="btn   mb-2" type="button" style="border: 1px solid #4C555E;color: #4C555E;">SOLD OUT</button>
+ <!-- Desktop (md and up) -->
+<div class="container main-items d-md-flex d-none">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb pt-4">
+      <li class="breadcrumb-item fw-medium">
+        <a class="text-decoration-none text-dark ps-3 pe-4" href="index.html">HOME</a>
+      </li>
+      <li class="breadcrumb-item fw-medium">
+        <a class="text-decoration-none text-dark pe-4" href="#">PROJECTS</a>
+      </li>
+      <li class="breadcrumb-item active fw-medium" aria-current="page">
+        <a style="color: #722525;" href="#">ALL PROJECTS</a>
+      </li>
+    </ol>
+  </nav>
+  <div class="status-buttons pt-4 me-3">
+    <button id="availableBtnDesktop" class="btn btn-success fw-semibold me-2 mb-2" type="button">AVAILABLE</button>
+    <button id="soldOutBtnDesktop" class="btn mb-2" type="button" style="border: 1px solid #4C555E; color: #4C555E;">SOLD OUT</button>
+  </div>
+</div>
+
+<!-- Mobile (sm only) -->
+<div class="container main-items d-md-none">
+  <div class="row align-items-center pt-4">
+    <div class="col-12 col-md-8" style="font-size: 14px;">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-2 mb-md-0">
+          <li class="breadcrumb-item fw-medium">
+            <a class="text-decoration-none text-dark ps-2 pe-1" href="index.html">HOME</a>
+          </li>
+          <li class="breadcrumb-item fw-medium">
+            <a class="text-decoration-none text-dark pe-1" href="#">PROJECTS</a>
+          </li>
+          <li class="breadcrumb-item active fw-medium" aria-current="page">
+            <a style="color: #722525;" href="#">ALL PROJECTS</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="col-12 col-md-4 text-md-end">
+      <div class="status-buttons">
+        <button id="availableBtnMobile" class="btn btn-success fw-semibold me-2 mb-2" type="button">AVAILABLE</button>
+        <button id="soldOutBtnMobile" class="btn mb-2" type="button" style="border: 1px solid #4C555E; color: #4C555E;">SOLD OUT</button>
+      </div>
     </div>
   </div>
+</div>
+
 
 <div class="container mb-5 ">
   
@@ -631,38 +667,49 @@
 </main>
 
 <script>
-// Toggle logic
-const availableBtn = document.getElementById('availableBtn');
-const soldOutBtn = document.getElementById('soldOutBtn');
+// Get all buttons (desktop + mobile)
+const availableBtns = document.querySelectorAll('#availableBtnDesktop, #availableBtnMobile');
+const soldOutBtns   = document.querySelectorAll('#soldOutBtnDesktop, #soldOutBtnMobile');
+
+// Carousels
 const availableCarousel = document.getElementById('availableCarousel');
-const soldOutCarousel = document.getElementById('soldOutCarousel');
+const soldOutCarousel   = document.getElementById('soldOutCarousel');
 
-let soldOutInitialized = false; // Track if Sold Out is already initialized
+let soldOutInitialized = false;
 
+// Show Available
 function showAvailable() {
   availableCarousel.style.display = 'block';
   soldOutCarousel.style.display = 'none';
-  availableBtn.classList.add('btn-success');
-  soldOutBtn.classList.remove('btn-soldout-custom');
-  soldOutBtn.classList.add('btn-soldout-outline');
+
+  availableBtns.forEach(btn => btn.classList.add('btn-success'));
+  soldOutBtns.forEach(btn => {
+    btn.classList.remove('btn-soldout-custom');
+    btn.classList.add('btn-soldout-outline');
+  });
 }
 
+// Show Sold Out
 function showSoldOut() {
   soldOutCarousel.style.display = 'block';
   availableCarousel.style.display = 'none';
-  soldOutBtn.classList.remove('btn-soldout-outline');
-  soldOutBtn.classList.add('btn-soldout-custom');
-  availableBtn.classList.remove('btn-success');
 
-  // Lazy initialize Sold Out carousel only when first shown
+  soldOutBtns.forEach(btn => {
+    btn.classList.remove('btn-soldout-outline');
+    btn.classList.add('btn-soldout-custom');
+  });
+  availableBtns.forEach(btn => btn.classList.remove('btn-success'));
+
+  // Initialize Sold Out carousel only once
   if (!soldOutInitialized) {
     initCarousel('soldPrev', 'soldNext', 'soldTrack');
     soldOutInitialized = true;
   }
 }
 
-availableBtn.addEventListener('click', showAvailable);
-soldOutBtn.addEventListener('click', showSoldOut);
+// Attach click events to ALL buttons
+availableBtns.forEach(btn => btn.addEventListener('click', showAvailable));
+soldOutBtns.forEach(btn => btn.addEventListener('click', showSoldOut));
 
 // Carousel logic
 function initCarousel(prevBtnId, nextBtnId, trackId) {
@@ -671,7 +718,7 @@ function initCarousel(prevBtnId, nextBtnId, trackId) {
   const nextBtn = document.getElementById(nextBtnId);
   const cards = track.querySelectorAll('.carousel-card');
 
-  let cardWidth = cards[0].offsetWidth + 15; 
+  let cardWidth = cards.length > 0 ? cards[0].offsetWidth + 15 : 0;
   let index = 0;
 
   function getVisibleCards() {
@@ -702,19 +749,20 @@ function initCarousel(prevBtnId, nextBtnId, trackId) {
   });
 
   window.addEventListener('resize', () => {
-    cardWidth = cards[0].offsetWidth + 15;
+    cardWidth = cards.length > 0 ? cards[0].offsetWidth + 15 : 0;
     updateButtons();
   });
 
   updateButtons();
 }
 
-// Init Available carousel on load
+// Initialize Available carousel on load
 initCarousel('availPrev', 'availNext', 'availTrack');
 
-// Default: show Available
+// Default view: show Available
 showAvailable();
 </script>
+
 
 
      
