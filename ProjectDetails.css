@@ -723,3 +723,26 @@ footer {
   cursor: zoom-in;
 }
 
+
+
+@media (min-width:1024px){
+  .SADHASIVAM-Text{
+
+  position: absolute;
+  right: 20%;
+  bottom: -11px;
+  letter-spacing: 6px !important;
+  
+}
+}
+@media (min-width:1440px){
+  .SADHASIVAM-Text{
+
+  position: absolute;
+  right: 20%;
+  bottom: -11px;
+  letter-spacing: 9px !important;
+  font-size: 55px !important;
+  
+}
+}

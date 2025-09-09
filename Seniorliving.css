@@ -239,3 +239,33 @@ footer {
     }
 }
 
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content should take remaining space */
+main {
+  flex: 1 0 auto;
+}
+
+/* Footer stays at bottom on lg screens */
+footer {
+  flex-shrink: 0;
+}
+
+/* Optional: small padding for mobile stacked layout */
+@media (max-width: 991.98px) {
+  footer {
+    position: relative;
+  }
+}
+
