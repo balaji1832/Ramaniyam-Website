@@ -469,9 +469,9 @@ footer {
 }
 @media (max-width:1034px){
   .collage-slot{
-    width: 205px;
-    height: 340px;
-    margin-left: 10px;
+    width: 205px !important;
+    height: 340px !important;
+    
 
   }
 }
