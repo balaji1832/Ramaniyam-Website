@@ -467,7 +467,7 @@ footer {
   border-radius: 8px;
   margin: 10px;     /* gap between slots */
 }
-@media (max-width:1034px){
+@media (max-width:1300px){
   .collage-slot{
     width: 205px !important;
     height: 340px !important;
