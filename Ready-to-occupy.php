@@ -21,158 +21,9 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
- <header class="sticky-top">
-  <nav class="navbar navbar-expand-lg py-2 " >
-    <div class="container ">
-      <a class="navbar-brand" href="index.html">
-        <img src="Ramaniyamicons/Ramanaiyamlogo.png" alt="Ramaniyam logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#mobileNavModal">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+ <?php include 'Header.php'; ?>
 
-      <!-- Desktop Navbar -->
-      <div class="collapse navbar-collapse ms-lg-5" id="mainNavbar">
-        <ul class="navbar-nav w-100 d-flex justify-content-between align-items-center">
-            <li class="nav-item dropdown dropdown-mega">
-           <a class="nav-link d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    PROJECTS <i class="bi bi-chevron-down ms-1"></i>
-            </a>
 
-  <div class="dropdown-menu megamenu p-0 border-0 ">
-  <div class="container">
-      <ul class="list-unstyled d-flex justify-content-evenly px-0 mb-0 text-uppercase">
-      <li><a href="Newlauches.html" class="text-dark text-decoration-none d-block p-3">New Launches</a></li>
-      <li><a href="Featured.html" class="text-dark text-decoration-none d-block p-3">Featured</a></li>
-      <li><a href="Ongoing.html" class="text-dark text-decoration-none d-block p-3">Ongoing</a></li>
-      <li><a href="Ready to occupy.html" class="text-dark text-decoration-none d-block p-3">READY TO OCCUPY</a></li>
-      <li><a href="#" class="text-dark text-decoration-none d-block p-3">Upcoming</a></li>
-      <li><a href="Allprojects.html" class="text-dark text-decoration-none d-block p-3">All Projects</a></li>
-    </ul>
-  </div>
-</div>
-
-          </li>
-         <li class="nav-item dropdown dropdown-mega">
-  <a class="nav-link d-flex align-items-center" href="#" role="button">
-    ABOUT US <i class="bi bi-chevron-down ms-1"></i>
-  </a>
-
-  <div class="dropdown-menu megamenu p-0 border-0 ">
-    <div class="container">
-      <ul class="list-unstyled d-flex justify-content-evenly px-0 mb-0 text-uppercase">
-        <li><a href="#" class="text-dark text-decoration-none d-block p-3">Our Story</a></li>
-        <li><a href="#" class="text-dark text-decoration-none d-block p-3">The Team</a></li>
-        <li><a href="#" class="text-dark text-decoration-none d-block p-3">Enablers</a></li>
-        <li><a href="#" class="text-dark text-decoration-none d-block p-3">Affiliates</a></li>
-        <li><a href="#" class="text-dark text-decoration-none d-block p-3">Testimonials</a></li>
-        <li><a href="#" class="text-dark text-decoration-none d-block p-3">In the Media</a></li>
-        <li><a href="#" class="text-dark text-decoration-none d-block p-3">Awards</a></li>
-      </ul>
-    </div>
-  </div>
-</li>
-
-          <li class="nav-item"><button class="newbutton">WHAT'S NEW</button></li>
-          <li class="nav-item d-flex align-items-center">
-            <img class="me-1" width="40" src="Ramaniyamicons/retirement-home - maroon 1.png" alt="">
-            <a href="Seniorliving.html " class="text-decoration-none text-dark ms-2" style="font-weight: 500;">SENIOR LIVING</a>
-          </li>
-          <li class="nav-item d-flex align-items-center enquirenow">
-            <img class="me-1" src="Ramaniyamicons/Group 2.png" alt="Phone Icon" width="40" height="40">
-            <div class="text ms-2" data-bs-toggle="modal" data-bs-target="#enquiryModal" style="cursor: pointer;font-weight: 500;">
-              ENQUIRE NOW<br>+91 97109 28855
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-
-<!-- MODAL MENU FOR MOBILE -->
-<div class="modal fade" id="mobileNavModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen-sm-down">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Menu</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <div class="accordion" id="mobileMenuAccordion">
-          <!-- Projects -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingProjects">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProjects">
-                Projects
-              </button>
-            </h2>
-            <div id="collapseProjects" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
-              <div class="accordion-body">
-                <ul class="list-unstyled text-uppercase">
-                  <li><a href="Newlauches.html" class="dropdown-item text-dark text-decoration-none d-block py-1">New Launches</a></li>
-                  <li><a href="Featured.html" class="dropdown-item text-dark text-decoration-none d-block py-1">Featured</a></li>
-                  <li><a href="Ongoing.html" class="dropdown-item text-dark text-decoration-none d-block py-1">Ongoing</a></li>
-                  <li><a href="Ready to occupy.html" class="dropdown-item text-dark text-decoration-none d-block py-1">READY TO OCCUPY</a></li>
-                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Upcoming</a></li>
-                  <li><a href="Allprojects.html" class="text-dark text-decoration-none d-block py-1">All Projects</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- About Us -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingAbout">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAbout">
-                About Us
-              </button>
-            </h2>
-            <div id="collapseAbout" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
-              <div class="accordion-body">
-                <ul class="list-unstyled text-uppercase">
-                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Our Story</a></li>
-                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">The Team</a></li>
-                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Enablers</a></li>
-                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Affiliates</a></li>
-                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Testimonials</a></li>
-                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">In the Media</a></li>
-                  <li><a href="#" class="dropdown-item text-dark text-decoration-none d-block py-1">Awards</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- What's New -->
-          <div class="accordion-item">
-            <div class="accordion-header px-3 py-2">
-              <button class="newbutton w-100">WHAT’S NEW</button>
-            </div>
-          </div>
-
-          <!-- Senior Living -->
-          <div class="accordion-item">
-            <div class="accordion-header px-3 py-2 d-flex align-items-center">
-              <img class="me-2" width="40" src="Ramaniyamicons/retirement-home - maroon 1.png" alt="">
-              <span class="SENIOR-LIVING fw-semibold"><a href="Seniorliving.html" class="text-decoration-none text-dark">SENIOR LIVING</a></span>
-            </div>
-          </div>
-
-          <!-- Enquire Now -->
-          <div class="accordion-item">
-            <div class="accordion-header px-3 py-2 d-flex align-items-center">
-              <img class="me-2" width="40" src="Ramaniyamicons/Group 2.png" alt="Phone Icon">
-              <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#enquiryModal">
-                ENQUIRE NOW<br><a href="#" class="text-dark text-decoration-none">+91 97109 28855</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Enquiry Modal -->
 <div class="modal fade" id="enquiryModal" tabindex="-1">
@@ -250,20 +101,20 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb pt-4">
       <li class="breadcrumb-item fw-medium">
-        <a class="text-decoration-none text-dark ps-3 pe-4" href="index.html">HOME</a>
+        <a class="text-decoration-none text-dark ps-3 pe-4" href="index.php">HOME</a>
       </li>
       <li class="breadcrumb-item fw-medium">
         <a class="text-decoration-none text-dark pe-4" href="#">PROJECTS</a>
       </li>
       <li class="breadcrumb-item active fw-medium" aria-current="page">
-        <a style="color: #722525;" href="#">ALL PROJECTS</a>
+        <a style="color: #722525;" href="#">READY TO OCCUPY</a>
       </li>
     </ol>
   </nav>
-  <div class="status-buttons pt-4 me-3">
+  <!-- <div class="status-buttons pt-4 me-3">
     <button id="availableBtnDesktop" class="btn btn-success fw-semibold me-2 mb-2" type="button">AVAILABLE</button>
     <button id="soldOutBtnDesktop" class="btn mb-2" type="button" style="border: 1px solid #4C555E; color: #4C555E;">SOLD OUT</button>
-  </div>
+  </div> -->
 </div>
 
 <!-- Mobile (sm only) -->
@@ -273,24 +124,24 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-2 mb-md-0">
           <li class="breadcrumb-item fw-medium">
-            <a class="text-decoration-none text-dark ps-2 pe-1" href="index.html">HOME</a>
+            <a class="text-decoration-none text-dark ps-2 pe-1" href="index.php">HOME</a>
           </li>
           <li class="breadcrumb-item fw-medium">
             <a class="text-decoration-none text-dark pe-1" href="#">PROJECTS</a>
           </li>
           <li class="breadcrumb-item active fw-medium" aria-current="page">
-            <a style="color: #722525;" href="#">ALL PROJECTS</a>
+            <a style="color: #722525;" href="#">READY TO OCCUPY</a>
           </li>
         </ol>
       </nav>
     </div>
 
-    <div class="col-12 col-md-4 text-md-end">
+    <!-- <div class="col-12 col-md-4 text-md-end">
       <div class="status-buttons">
         <button id="availableBtnMobile" class="btn btn-success fw-semibold me-2 mb-2" type="button">AVAILABLE</button>
         <button id="soldOutBtnMobile" class="btn mb-2" type="button" style="border: 1px solid #4C555E; color: #4C555E;">SOLD OUT</button>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -351,7 +202,7 @@
             </div>
           </div>
         </div>
-        <div class="available-btn"><a class="text-decoration-none text-light" href="ProjectsDetails.html">AVAILABLE</a></div>
+        <div class="available-btn"><a class="text-decoration-none text-light" href="ProjectsDetails.php">AVAILABLE</a></div>
       </div>
     </div>
 
@@ -505,164 +356,7 @@
 </div>
 
 
-  <!-- SOLD OUT Carousel -->
-<div id="soldOutCarousel" class="carousel-wrapper" style="display:none;">
-  <!-- Prev Button -->
-  <button class="carousel-btn prev" id="soldPrev">
-    <i class="bi bi-chevron-left"></i>
-  </button>
 
-  <!-- Carousel Track -->
-  <div class="carousel-track" id="soldTrack">
-
-    <!-- Sold Out Card 1 -->
-    <div class="carousel-card">
-      <div class="card position-relative">
-        <img src="Ramaniyamimages/flat-2.png" class="card-img-top" alt="Project Image">
-        <div class="card-header"><p class="Apartment-name">SRI DEVI</p></div>
-        <div class="card-body px-3 py-2" style="line-height: 23px">
-          <div class="row">
-            <div class="col-6">
-              <div class="d-flex align-items-center mb-4">
-                <img src="Ramaniyamicons/ordered-list.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">TOTAL UNITS</div>
-                <div class="fw-light" style="font-weight: 300;font-size: 13px;">10</div>
-              </div>
-              </div>
-              <div class="d-flex align-items-center mb-2">
-                <img src="Ramaniyamicons/building-one.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">FLOORS</div>
-                <div class="fw-light" style="font-weight: 300;font-size: 13px;">2 Basement + Stilt + 25 Floors</div></div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="d-flex align-items-center mb-4">
-                <img src="Ramaniyamicons/arrow-right-circle.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">SALEABLE AREA</div>
-                <div class="fw-light" style="font-weight: 300;font-size: 13px;">1250 to 1530 sq.ft</div></div>
-              </div>
-              <div class="d-flex align-items-start mb-2">
-                <img src="Ramaniyamicons/Location2.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">LOCATION</div>
-                <div class="location-text fw-light" style="font-weight: 300;font-size: 13px;">8th Main Road Kasturibai Nagar Adyar</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="soldout-btn">SOLD OUT</div>
-      </div>
-    </div>
-
-    <!-- Sold Out Card 2 -->
-    <div class="carousel-card">
-      <div class="card position-relative">
-        <img src="Ramaniyamimages/flat-2.png" class="card-img-top" alt="Project Image">
-        <div class="card-header"><p class="Apartment-name">SRI DEVI</p></div>
-        <div class="card-body px-3 py-2" style="line-height: 23px">
-          <div class="row">
-            <div class="col-6">
-              <div class="d-flex align-items-center mb-4">
-                <img src="Ramaniyamicons/ordered-list.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">TOTAL UNITS</div>
-                <div class="fw-light" style="font-weight: 300;font-size: 13px;">10</div></div>
-              </div>
-              <div class="d-flex align-items-center mb-2">
-                <img src="Ramaniyamicons/building-one.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">FLOORS</div>
-                <div class="fw-light" style="font-weight: 300;font-size: 13px;">2 Basement + Stilt + 25 Floors</div></div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="d-flex align-items-center mb-4">
-                <img src="Ramaniyamicons/arrow-right-circle.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">SALEABLE AREA</div>
-                <div class="fw-light" style="font-weight: 300;font-size: 13px;">1250 to 1530 sq.ft</div></div>
-              </div>
-              <div class="d-flex align-items-start mb-2">
-                <img src="Ramaniyamicons/Location2.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">LOCATION</div>
-                <div class="location-text fw-light" style="font-weight: 300;font-size: 13px;">8th Main Road Kasturibai Nagar Adyar</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="soldout-btn">SOLD OUT</div>
-      </div>
-    </div>
-
-    <!-- Sold Out Card 3 -->
-    <div class="carousel-card">
-      <div class="card position-relative">
-        <img src="Ramaniyamimages/flat-2.png" class="card-img-top" alt="Project Image">
-        <div class="card-header"><p class="Apartment-name">SRI DEVI</p></div>
-        <div class="card-body px-3 py-2" style="line-height: 23px">
-          <div class="row">
-            <div class="col-6">
-              <div class="d-flex align-items-center mb-4">
-                <img src="Ramaniyamicons/ordered-list.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">TOTAL UNITS</div><div class="fw-light" style="font-weight: 300;font-size: 13px;">10</div></div>
-              </div>
-              <div class="d-flex align-items-center mb-2">
-                <img src="Ramaniyamicons/building-one.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">FLOORS</div><div class="fw-light" style="font-weight: 300;font-size: 13px;">2 Basement + Stilt + 25 Floors</div></div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="d-flex align-items-center mb-4">
-                <img src="Ramaniyamicons/arrow-right-circle.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">SALEABLE AREA</div><div class="fw-light" style="font-weight: 300;font-size: 13px;">1250 to 1530 sq.ft</div></div>
-              </div>
-              <div class="d-flex align-items-start mb-2">
-                <img src="Ramaniyamicons/Location2.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">LOCATION</div><div class="location-text fw-light" style="font-weight: 300;font-size: 13px;">8th Main Road Kasturibai Nagar Adyar</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="soldout-btn">SOLD OUT</div>
-      </div>
-    </div>
-
-    <!-- Sold Out Card 4 -->
-    <div class="carousel-card">
-      <div class="card position-relative">
-        <img src="Ramaniyamimages/flat-2.png" class="card-img-top" alt="Project Image">
-        <div class="card-header"><p class="Apartment-name">SRI DEVI</p></div>
-        <div class="card-body px-3 py-2" style="line-height: 23px">
-          <div class="row">
-            <div class="col-6">
-              <div class="d-flex align-items-center mb-4">
-                <img src="Ramaniyamicons/ordered-list.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">TOTAL UNITS</div><div class="fw-light" style="font-weight: 300;font-size: 13px;">10</div></div>
-              </div>
-              <div class="d-flex align-items-center mb-2">
-                <img src="Ramaniyamicons/building-one.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">FLOORS</div><div class="fw-light" style="font-weight: 300;font-size: 13px;">2 Basement + Stilt + 25 Floors</div></div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="d-flex align-items-center mb-4">
-                <img src="Ramaniyamicons/arrow-right-circle.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">SALEABLE AREA</div><div class="fw-light" style="font-weight: 300;font-size: 13px;">1250 to 1530 sq.ft</div></div>
-              </div>
-              <div class="d-flex align-items-start mb-2">
-                <img src="Ramaniyamicons/Location2.png">
-                <div class="ms-2"><div class="fw-semibold" style="font-size: 12px;">LOCATION</div><div class="location-text fw-light" style="font-weight: 300;font-size: 13px;">8th Main Road Kasturibai Nagar Adyar</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="soldout-btn">SOLD OUT</div>
-      </div>
-    </div>
-
-  </div> 
-
-  <!-- Next Button -->
-  <button class="carousel-btn next" id="soldNext">
-    <i class="bi bi-chevron-right"></i>
-  </button>
-</div>
 
 </div>
 </main>
@@ -766,129 +460,12 @@ showAvailable();
 
 
 
-<footer class="mt-lg-4 " style=" color: white; font-family: 'Poppins', sans-serif;">
-  <div class="container">
-
-    <!-- ✅ For large screens and up (desktop horizontal layout) -->
-    <div class="d-none d-lg-flex justify-content-between align-items-center text-light w-100">
-      <div class="Footer-elements">Copyrights @ 2025 All Rights<br> Reserved Ramaniyam</div>
-
-      <div class="Footer-elements d-flex ms-lg-5">
-        <img src="Ramaniyamicons/Location.png" style="cursor: pointer;width: 40px;height: 40px;margin-top: 5px;" alt="location.png" 
-             data-bs-toggle="modal" data-bs-target="#locationmodal">
-        <p class="mt-3">Contact Us</p>
-      </div>
-
-      <div class="Footer-elements">Site Map</div>
-      <div class="Footer-elements">Blogs</div>
-
-    <div class="Footer-elements d-flex align-items-center gap-3">
-  <a href="#" class="social-circle">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-
-  <a href="#" class="social-circle">
-    <i class="fab fa-instagram"></i>
-  </a>
-</div>
+     
+<?php include 'Footer.php' ; ?>
 
 
 
-      <div class="Footer-elements">
-        Designed and Developed by <br>AyatiWorks
-      </div>
-    </div>
 
-    <!-- ✅ For small + medium screens (mobile + tablet stacked layout) -->
-    <div class="d-flex d-lg-none flex-start flex-column text-light" style="line-height: 2;">
-
-  <!-- Site Map -->
-  <div class="Footer-elements mb-2 text-md-center">Site Map</div>
-  <div class="Footer-elements mb-3 text-md-center">Blogs</div>
-
-  <!-- Social + Location + Contact -->
-  <div class="Footer-elements mb-3 d-flex align-items-center gap-3 justify-content-start justify-content-md-center">
-
-    <!-- Facebook -->
-    <a href="#" class="social-circle">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-
-    <!-- Instagram -->
-    <a href="#" class="social-circle">
-      <i class="fab fa-instagram"></i>
-    </a>
-
-    <!-- Location -->
-    <a 
-      class="location-circle"
-      data-bs-toggle="modal" 
-      data-bs-target="#locationmodal"
-      style="cursor:pointer;"
-      width="40px"
-    >
-      <i class="bi bi-geo-alt" ></i>
-    </a>
-
-    <!-- Contact text -->
-    <span class="ms-2">Contact Us</span>
-  </div>
-
-  <!-- Copyright -->
-  <div class="Footer-elements small mb-2 text-md-center">
-    Copyright @ 2025 All Rights Reserved Ramaniyam
-  </div>
-
-  <div class="Footer-elements small text-md-center">
-    Designed &amp; Developed by Ayati Works
-  </div>
-
-</div>
-
-
-  </div>
-</footer>
-
-
-
-<!-- footer modal -->
-<div class="modal" id="locationmodal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color: #D9D9D9;">
-        <h5 class="modal-title" style="font-family: 'aboreto'; font-weight: 500;">CONTACT US</h5>
-        <!-- Close button -->
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-light" style="background-color: #722525; font-size: 15px;">
-        <div class="d-flex ms-4 mb-4 mt-3">
-          <img src="Ramaniyamicons/f-ico-1.png" height="30px" alt="">
-          <p class="ms-4">Ramaniyam Real Estates Pvt Ltd.</p>
-        </div>
-        <div class="d-flex ms-4 mb-4">
-          <img src="Ramaniyamicons/f-ico-2.png" height="33px" alt="">
-          <p class="ms-4">
-            <a href="https://maps.app.goo.gl/rwYzTm6RGV5m8N3P6" class="text-light">
-              14/67, 3rd Main Rd, Gandhi Nagar, Adyar, Chennai, Tamil Nadu 600020
-            </a>
-          </p>
-        </div>
-        <div class="d-flex ms-4 mb-4">
-          <img src="Ramaniyamicons/f-ico-3.png" height="30px" alt="">
-          <p class="ms-4">Monday - Saturday : 9:30 am–5:30 pm</p>
-        </div>
-        <div class="d-flex ms-4 mb-4">
-          <img src="Ramaniyamicons/f-ico-4.png" height="30px" alt="">
-          <p class="ms-4">044 4344 7500 <br>+91 97109 28855, +91 72999 22617</p>
-        </div>
-        <div class="d-flex ms-4 mb-4">
-          <img src="Ramaniyamicons/f-ico-5.png" height="25px" alt="">
-          <p class="ms-4">sales@ramaniyam.com</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
     
