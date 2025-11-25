@@ -35,9 +35,7 @@ header {
 }
 
 /* Remove hover-based dropdown opening, JS will handle it */
-.navbar .dropdown:hover > .dropdown-menu {
-    /* No rules here */
-}
+
 
 /* Mega dropdown positioning */
 .dropdown-mega {
@@ -152,10 +150,7 @@ header {
 
 /* Remove hover-based dropdown for desktop, JS will handle it */
 @media (min-width: 992px) {
-    .navbar .dropdown:hover .dropdown-menu {
-        /* No rules here */
-    }
-
+    
     .navbar .dropdown-menu {
         display: none;
         opacity: 0;
@@ -316,6 +311,91 @@ footer {
     .Footer-elements {
         margin-top: 10px;
     }
+}
+
+
+.social-circle {
+  width: 38px;
+  height: 38px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.social-circle i {
+  color: #ffffff;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.Footer-elements {
+  
+  gap: 14px;
+}
+
+/* Hover Effect */
+.social-circle:hover {
+  border-color: #722525;
+}
+
+
+
+
+
+
+@media (min-width:100px) and (max-width:768px) {
+  
+  .social-circle{
+  width: 38px;
+  height: 38px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.location-circle {
+  width: 45px;
+  height: 45px;
+  
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.social-circle i,
+.location-circle i {
+  color: #ffffff;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+/* Hover */
+.social-circle:hover,
+.location-circle:hover {
+  border-color: #722525;
+}
+
+.social-circle:hover i,
+.location-circle:hover i {
+  color: #722525;
+}
+
+/* Small alignment fix for location icon */
+.location-circle i {
+  font-size: 20px;
+  margin-top: 2px; 
+}
+
 }
 
 /* .status-buttons{
