@@ -98,7 +98,7 @@
             <div class="breadcrumb pt-5">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="index.php" class="text-decoration-none text-dark"
+                  <a href="index" class="text-decoration-none text-dark"
                     >Home</a
                   >
                 </li>

@@ -101,7 +101,7 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb pt-4">
       <li class="breadcrumb-item fw-medium">
-        <a class="text-decoration-none text-dark ps-3 pe-4" href="index.php">HOME</a>
+        <a class="text-decoration-none text-dark ps-3 pe-4" href="index">HOME</a>
       </li>
       <li class="breadcrumb-item fw-medium">
         <a class="text-decoration-none text-dark pe-4" href="#">PROJECTS</a>
@@ -124,7 +124,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-2 mb-md-0">
           <li class="breadcrumb-item fw-medium">
-            <a class="text-decoration-none text-dark ps-2 pe-1" href="index.php">HOME</a>
+            <a class="text-decoration-none text-dark ps-2 pe-1" href="index">HOME</a>
           </li>
           <li class="breadcrumb-item fw-medium">
             <a class="text-decoration-none text-dark pe-1" href="#">PROJECTS</a>
@@ -202,7 +202,7 @@
             </div>
           </div>
         </div>
-        <div class="available-btn"><a class="text-decoration-none text-light" href="ProjectsDetails.php">AVAILABLE</a></div>
+        <div class="available-btn"><a class="text-decoration-none text-light" href="ProjectsDetails">AVAILABLE</a></div>
       </div>
     </div>
 

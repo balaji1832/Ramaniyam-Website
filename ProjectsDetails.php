@@ -99,7 +99,7 @@
       <nav aria-label="breadcrumb" class="d-none d-md-block">
         <ol class="breadcrumb mb-5 mt-3"  style="font-weight: 300;">
           <li class="breadcrumb-item fw-medium">
-            <a class="text-decoration-none text-light ps-3"  style="font-weight: 300;" href="index.php">HOME</a>
+            <a class="text-decoration-none text-light ps-3"  style="font-weight: 300;" href="index">HOME</a>
           </li>
           <li class="breadcrumb-item fw-medium ps-4">
             <a class="text-decoration-none text-light ps-3"  style="font-weight: 300;" href="#">PROJECTS</a>
@@ -725,15 +725,26 @@
 
 
 
-      <!-- LOCATION SECTION -->
-       <div class="container">
-        <div class="LOCATION mb-5" id="LOCATION">
-        <h3>LOCATION</h3>
-        <div class="container">
-          <img src="Ramaniyamimages/image 28.png" width="100%" alt=""  style="border-radius: 20px;"/>
-        </div>
-      </div> 
-       </div>
+     <!-- LOCATION SECTION -->
+<div class="container">
+  <div class="LOCATION " id="LOCATION">
+    <h3>LOCATION</h3>
+
+    <div class="map-responsive">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d466.94636579648915!2d80.2571828!3d13.0086876!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267ea840161f5%3A0x1426490f15f7b21f!2sRamaniyam%20Real%20Estates!5e1!3m2!1sen!2sin!4v1764669857852!5m2!1sen!2sin" 
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</div>
+
        
     </main>
 
@@ -939,6 +950,26 @@ document.querySelectorAll('.dropdown-mega').forEach(function (dropdown) {
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"></script>
+
+<!-- Header hides script -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll === 0) {
+            // At top → show header
+            header.classList.remove("hide-header");
+        } else {
+            // Not at top → hide header always
+            header.classList.add("hide-header");
+        }
+    });
+});
+</script>
+
 
 <!-- TOPICS SECTIONS ACTIVE JAVASCRIPT -->
 

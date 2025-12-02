@@ -19,7 +19,7 @@
   <div class="dropdown-menu megamenu p-0 border-0 ">
   <div class="container">
       <ul class="list-unstyled d-flex justify-content-evenly px-0 mb-0 text-uppercase">
-      <li><a href="Newlauches" class="text-dark text-decoration-none d-block p-3">New Launches</a></li>
+      <li><a href="Newlaunches" class="text-dark text-decoration-none d-block p-3">New Launches</a></li>
       <li><a href="Featured" class="text-dark text-decoration-none d-block p-3">Featured</a></li>
       <li><a href="Ongoing" class="text-dark text-decoration-none d-block p-3">Ongoing</a></li>
       <li><a href="Ready-to-occupy" class="text-dark text-decoration-none d-block p-3">READY TO OCCUPY</a></li>
@@ -87,7 +87,7 @@
             <div id="collapseProjects" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
               <div class="accordion-body">
                 <ul class="list-unstyled text-uppercase">
-                  <li><a href="Newlauches" class="dropdown-item text-dark text-decoration-none d-block py-1">New Launches</a></li>
+                  <li><a href="/Projects/Newlauches" class="dropdown-item text-dark text-decoration-none d-block py-1">New Launches</a></li>
                   <li><a href="Featured" class="dropdown-item text-dark text-decoration-none d-block py-1">Featured</a></li>
                   <li><a href="Ongoing" class="dropdown-item text-dark text-decoration-none d-block py-1">Ongoing</a></li>
                   <li><a href="Ready-to-occupy" class="dropdown-item text-dark text-decoration-none d-block py-1">READY TO OCCUPY</a></li>

@@ -550,12 +550,21 @@ footer {
 }
 @media (max-width:1300px){
   .collage-slot{
-    width: 205px !important;
+    width: 202px !important;
     height: 340px !important;
     
 
   }
 }
+
+/* @media (min-width:900px) and (max-width:1300px){
+  .collage-slot{
+    width: 200px !important;
+    height: 340px !important;
+    
+
+  }
+} */
 
 /* All images stay stacked inside */
 .collage-img {
