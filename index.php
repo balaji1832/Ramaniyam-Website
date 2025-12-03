@@ -1,19 +1,17 @@
 <?php
 // Base folder for images
-$imageBasePath = "Ramaniyamimages/";
+$imageBasePath = "Ramaniyam-Home-images/";
 
-// List of image files (you can change these names later or load from DB)
-$imageFiles = [
-  "img-1.png",
-  "img-2.png",
-  "img-3.png",
-  "img-4.png",
-  "img=5.png",
-  "img-6.png",
-  "img-7.png",
-  "img-8.png",
-];
+// Get all images from the folder automatically
+$files = glob($imageBasePath . "*.{png,jpg,jpeg,JPG,JPEG,PNG}", GLOB_BRACE);
+
+// Convert to just file names (no folder path)
+$imageFiles = array_map('basename', $files);
+
+// Sort them by name (optional)
+sort($imageFiles);
 ?>
+
 
 
 <!DOCTYPE html>
