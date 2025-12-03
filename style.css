@@ -552,7 +552,7 @@ footer {
   .collage-slot{
     width: 202px !important;
     height: 340px !important;
-    
+   
 
   }
 }
@@ -577,6 +577,7 @@ footer {
   opacity: 0;
   transition: opacity 1s ease-in-out;
   z-index: 0;
+  border-radius: 20px ;
 }
 
 /* Active image */
@@ -634,11 +635,25 @@ footer {
     }
 }
 
+/* MOBILE CAROUSEL – SAME WIDTH & HEIGHT */
+@media (max-width: 991.98px) {
 
- .carousel-sm-img {
-    max-width: 60%;   /* shrink size */
-    height: auto;     /* keep ratio */
+  /* (optional) give a little vertical breathing space */
+  #imageCarousel .carousel-item {
+    padding: 12px 0;
   }
+
+  /* This makes EVERY image the same size */
+  #imageCarousel .carousel-sm-img {
+    width: 230px;          /* fixed width */
+    height: 370px;         /* fixed height */
+    object-fit: cover;     /* fill the box, no distortion */
+    object-position: center; /* or center bottom if you want less sky */
+    display: block;
+    border-radius: 10px;
+  }
+}
+
 
 /* @media (max-width: 767px) {
     .Website-name {
@@ -682,3 +697,31 @@ footer {
   }
   
 } */
+
+/* =================================
+   INITIAL 4 IMAGES – MATCH COLLAGE
+   ================================= */
+.initial-card {
+  width: 100%;
+  height: 500px;         /* same as .collage-slot desktop */
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+}
+
+.initial-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* fill the card nicely */
+  display: block;
+  border-radius: 20px;
+}
+
+/* Match the smaller height used in collage at <=1300px */
+@media (max-width: 1300px) {
+  .initial-card {
+    height: 340px;
+  }
+}
+
+

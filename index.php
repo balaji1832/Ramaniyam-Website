@@ -1,3 +1,21 @@
+<?php
+// Base folder for images
+$imageBasePath = "Ramaniyamimages/";
+
+// List of image files (you can change these names later or load from DB)
+$imageFiles = [
+  "img-1.png",
+  "img-2.png",
+  "img-3.png",
+  "img-4.png",
+  "img=5.png",
+  "img-6.png",
+  "img-7.png",
+  "img-8.png",
+];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,21 +123,22 @@
       </p>
     </div>
     <center>
-      <div class="row g-3" style="max-width: 1  200px;">
+  <div class="row g-3" style="max-width: 1200px;">
+    <?php for ($i = 0; $i < 4; $i++): ?>
       <div class="col-6 col-md-6 col-lg-3 mt-2">
-        <img src="Ramaniyamimages/img-1.png" class="img-fluid" alt="...">
+        <div class="initial-card">
+          <img
+            src="<?php echo $imageBasePath . $imageFiles[$i]; ?>"
+            class="initial-card-img"
+            alt="Ramaniyam Image <?php echo $i + 1; ?>"
+          >
+        </div>
       </div>
-      <div class="col-6 col-md-6 col-lg-3 mt-2">
-        <img src="Ramaniyamimages/img-2.png" class="img-fluid" alt="...">
-      </div>
-      <div class="col-6 col-md-6 col-lg-3 mt-2">
-        <img src="Ramaniyamimages/img-3.png" class="img-fluid" alt="...">
-      </div>
-      <div class="col-6 col-md-6 col-lg-3 mt-2">
-        <img src="Ramaniyamimages/img-4.png" class="img-fluid" alt="...">
-      </div>
-    </div>
-    </center>
+    <?php endfor; ?>
+  </div>
+</center>
+
+
 
     
 
@@ -158,38 +177,50 @@
     <div class="container pb-4">
 
       <!-- ✅ Desktop Collage -->
-      <div class="row img-row justify-content-center d-none d-lg-flex" id="image-collage" style="max-width: 1300px; position: relative; overflow: hidden;">
-        <div class="col-6 col-lg-3 collage-slot">
-          <img src="Ramaniyamimages/img-1.png" class="img-fluid collage-img" alt="">
-          <img src="Ramaniyamimages/img=5.png" class="img-fluid collage-img" alt="">
-        </div>
-        <div class="col-6 col-lg-3 collage-slot">
-          <img src="Ramaniyamimages/img-2.png" class="img-fluid collage-img" alt="">
-          <img src="Ramaniyamimages/img-6.png" class="img-fluid collage-img" alt="">
-        </div>
-        <div class="col-6 col-lg-3 collage-slot">
-          <img src="Ramaniyamimages/img-3.png" class="img-fluid collage-img" alt="">
-          <img src="Ramaniyamimages/img-7.png" class="img-fluid collage-img" alt="">
-        </div>
-        <div class="col-6 col-lg-3 collage-slot">
-          <img src="Ramaniyamimages/img-4.png" class="img-fluid collage-img" alt="">
-          <img src="Ramaniyamimages/img-8.png" class="img-fluid collage-img" alt="">
-        </div>
-      </div>
+      <div class="row img-row justify-content-center d-none d-lg-flex"
+     id="image-collage"
+     style="max-width: 1300px; position: relative; overflow: hidden;">
+
+  <?php for ($col = 0; $col < 4; $col++): ?>
+    <div class="col-6 col-lg-3 collage-slot">
+      <!-- Top image for this column -->
+      <img
+        src="<?php echo $imageBasePath . $imageFiles[$col]; ?>"
+        class="img-fluid collage-img"
+        alt="Collage Image Top <?php echo $col + 1; ?>"
+      >
+      <!-- Bottom image for this column (offset by +4) -->
+      <img
+        src="<?php echo $imageBasePath . $imageFiles[$col + 4]; ?>"
+        class="img-fluid collage-img"
+        alt="Collage Image Bottom <?php echo $col + 5; ?>"
+      >
+    </div>
+  <?php endfor; ?>
+
+</div>
+
 
       <!-- ✅ Mobile Carousel -->
-      <div id="imageCarousel" class="carousel slide vertical-carousel d-block d-lg-none" data-bs-ride="carousel" data-bs-interval="2000">
-        <div class="carousel-inner">
-          <div class="carousel-item active"><img src="Ramaniyamimages/img-1.png" class="d-block img-fluid mx-auto carousel-sm-img" alt=""></div>
-          <div class="carousel-item"><img src="Ramaniyamimages/img-2.png" class="d-block img-fluid mx-auto carousel-sm-img" alt=""></div>
-          <div class="carousel-item"><img src="Ramaniyamimages/img-3.png" class="d-block img-fluid mx-auto carousel-sm-img" alt=""></div>
-          <div class="carousel-item"><img src="Ramaniyamimages/img-4.png" class="d-block img-fluid mx-auto carousel-sm-img" alt=""></div>
-          <div class="carousel-item"><img src="Ramaniyamimages/img-5.png" class="d-block img-fluid mx-auto carousel-sm-img" alt=""></div>
-          <div class="carousel-item"><img src="Ramaniyamimages/img-6.png" class="d-block img-fluid mx-auto carousel-sm-img" alt=""></div>
-          <div class="carousel-item"><img src="Ramaniyamimages/img-7.png" class="d-block img-fluid mx-auto carousel-sm-img" alt=""></div>
-          <div class="carousel-item"><img src="Ramaniyamimages/img-8.png" class="d-block img-fluid mx-auto carousel-sm-img" alt=""></div>
-        </div>
+      <div id="imageCarousel"
+     class="carousel slide vertical-carousel d-block d-lg-none"
+     data-bs-ride="carousel"
+     data-bs-interval="2000">
+
+  <div class="carousel-inner">
+    <?php foreach ($imageFiles as $index => $file): ?>
+      <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
+        <img
+          src="<?php echo $imageBasePath . $file; ?>"
+          class="d-block img-fluid mx-auto carousel-sm-img"
+          alt="Carousel Image <?php echo $index + 1; ?>"
+        >
       </div>
+    <?php endforeach; ?>
+  </div>
+</div>
+
+
 
       <!-- ✅ Website Title -->
       <div class="Website-name d-md-block d-lg-block website-title mt-4" style="line-height: 6px;">
