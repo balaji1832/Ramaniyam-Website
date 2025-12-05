@@ -1,0 +1,137 @@
+<?php require_once('header.php'); ?>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+<script src="highcharts/highcharts.js"></script>
+<script src="highcharts/data.js"></script>
+<script src="highcharts/drilldown.js"></script>
+
+<section class="content-header">
+	<h1>Dashboard</h1>
+</section>
+
+<?php
+$statement = $pdo->prepare("SELECT * FROM tbl_top_category");
+$statement->execute();
+$total_top_category = $statement->rowCount();
+
+$statement = $pdo->prepare("SELECT * FROM tbl_mid_category");
+$statement->execute();
+$total_mid_category = $statement->rowCount();
+
+$statement = $pdo->prepare("SELECT * FROM tbl_end_category");
+$statement->execute();
+$total_end_category = $statement->rowCount();
+
+// $statement = $pdo->prepare("SELECT * FROM tbl_product");
+// $statement->execute();
+// $total_product = $statement->rowCount();
+
+$statement = $pdo->prepare("SELECT * FROM tbl_payment WHERE payment_status=?");
+$statement->execute(array('Completed'));
+$total_order_completed = $statement->rowCount();
+
+$statement = $pdo->prepare("SELECT * FROM tbl_payment WHERE shipping_status=?");
+$statement->execute(array('Completed'));
+$total_shipping_completed = $statement->rowCount();
+
+$statement = $pdo->prepare("SELECT * FROM tbl_payment WHERE payment_status=?");
+$statement->execute(array('Pending'));
+$total_order_pending = $statement->rowCount();
+
+$statement = $pdo->prepare("SELECT * FROM tbl_payment WHERE payment_status=? AND shipping_status=?");
+$statement->execute(array('Completed','Pending'));
+$total_order_complete_shipping_pending = $statement->rowCount();
+
+
+
+$statement = $pdo->prepare("SELECT * FROM userlog");
+$statement->execute();
+$total_userlog = $statement->rowCount();
+
+
+
+?>
+
+<?php
+
+
+
+$statement =$pdo->prepare("SELECT YEAR(FROM_UNIXTIME(date)) as year, MONTH(FROM_UNIXTIME(date)) as month, COUNT(id) as num FROM tbl_order GROUP BY YEAR(FROM_UNIXTIME(date)), MONTH(FROM_UNIXTIME(date)) ASC");
+  $statement->execute();
+  $result = $statement->fetchAll(PDO::FETCH_ASSOC);   
+
+
+	$orders = array();
+	$years = array();
+	foreach ($result as $res) {
+	if (!isset($orders[$res['year']])) {
+	for ($i = 1; $i <= 12; $i++) {
+	$orders[$res['year']][$i] = 0;
+	}
+	}
+	$years[] = $res['year'];
+	$orders[$res['year']][$res['month']] = $res['num'];
+	}
+
+  $data['ordersByMonth']=  array(
+            'years' => array_unique($years),
+            'orders' => $orders
+        );
+
+
+
+
+  /* Getting demo_click table data */
+  $statement =$pdo->prepare("SELECT count(cust_id) as count FROM tbl_customer 
+       ORDER BY created_at");
+  $statement->execute();
+  $result = $statement->fetchAll(PDO::FETCH_ASSOC);   
+  $customer = json_encode(array_column($result, 'count'),JSON_NUMERIC_CHECK);
+
+
+
+    $statement_count =$pdo->prepare("SELECT count(payment_method) as count FROM tbl_payment 
+       ORDER BY payment_date");
+  $statement_count->execute();
+  $result_code = $statement_count->fetchAll(PDO::FETCH_ASSOC);   
+  
+
+?>
+
+  <div class="continer">
+    <div class="row" >
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart - Orders By Month</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="container-by-month" style="min-width: 310px; height: 400px; margin: 0 auto;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart - Orders From Referrer</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="container-by-referrer" style="min-width: 310px; height: 400px; margin: 0 auto;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<?php require_once('footer.php'); ?>
